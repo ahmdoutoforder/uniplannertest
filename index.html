@@ -4,6 +4,7 @@
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#090d18"><title>UniPlanner — Your semester, in control</title>
 <meta name="description" content="A calm, reliable workspace for university life: tasks, calendar, timetable, grades and focus.">
+<link rel="manifest" href="./manifest.webmanifest"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="UniPlanner">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
@@ -389,7 +390,39 @@ a{ text-decoration-color:#a78bfa66 }
 @media(max-width:900px){.task-toolbar{align-items:stretch}.task-toolbar .search{flex:1 1 180px!important;width:auto!important}.planning-summary{gap:7px}.planning-stat{padding:11px}}
 @media(max-width:520px){.planning-summary{grid-template-columns:repeat(2,minmax(0,1fr))}.planning-stat strong{font-size:20px}.task-toolbar .search{flex:1 1 100%!important}}
 @media(prefers-reduced-motion:reduce){.planning-stat{transition:none}.planning-stat:hover{transform:none}}
+/* Semester upgrade styles */
+.target-grade-tool{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;margin:10px 0;padding:10px;border:1px solid #332a45;border-radius:10px;background:#15111d}.target-grade-tool label{display:flex;align-items:center;gap:8px;font-size:10px;color:var(--muted)}.target-grade-tool input{width:72px;background:#09080f;border:1px solid var(--line);border-radius:8px;color:var(--text);padding:8px}.target-grade-tool span{font-size:10px;color:var(--purple);line-height:1.5}.semester-heading{margin-top:24px}.semester-summary-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin:12px 0}.semester-mini-stat{padding:15px;border:1px solid var(--line);border-radius:15px;background:linear-gradient(145deg,#171324,#100e18);min-width:0}.semester-mini-stat span,.semester-mini-stat small{display:block;color:var(--muted);font-size:10px}.semester-mini-stat strong{display:block;font:800 25px Manrope;margin:7px 0;overflow-wrap:anywhere}.semester-goal{display:flex;align-items:center;justify-content:space-between;gap:16px;margin:12px 0;padding:16px}.semester-goal h3{margin:5px 0}.goal-controls{display:flex;align-items:center;gap:8px;flex-wrap:wrap}.goal-controls label{font-size:11px;color:var(--muted)}.goal-controls input{width:82px;background:#09080f;border:1px solid var(--line);border-radius:9px;color:var(--text);padding:10px}.semester-subject-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:11px;margin:12px 0 22px}.semester-mini-stat,.semester-subject-card,.attendance-subject{box-shadow:0 8px 26px #0002}.semester-subject-card{border:1px solid #332a45;background:linear-gradient(145deg,#171324,#100e18);border-radius:15px;overflow:hidden;min-width:0}.subject-card-toggle{display:flex;width:100%;align-items:center;justify-content:space-between;gap:10px;padding:16px;text-align:left;background:transparent;color:var(--text);border:0}.subject-card-main{display:flex;flex-direction:column;gap:6px;min-width:0}.subject-card-kicker{font-size:9px;letter-spacing:1.2px;color:var(--purple);font-weight:800}.subject-card-main strong{font:750 13px Manrope;overflow-wrap:anywhere}.subject-card-meta{font-size:10px;color:var(--muted);line-height:1.5}.subject-card-side{display:flex;align-items:center;gap:8px;flex-shrink:0}.subject-status{display:inline-flex;border:1px solid #40334f;background:#241b31;color:#d9c9ff;border-radius:999px;padding:5px 8px;font-size:9px;font-weight:800;white-space:nowrap}.subject-status.risk{border-color:#804354;background:#3b1c2a;color:#ffc1cc}.subject-chevron{display:grid;place-items:center;width:24px;height:24px;border:1px solid var(--line);border-radius:8px;color:var(--purple)}.subject-card-details{padding:0 15px 15px;border-top:1px solid #30283f}.subject-detail-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;padding:13px 0}.subject-detail-grid>div{min-width:0}.subject-detail-grid span,.subject-detail-grid small{display:block;color:var(--muted);font-size:9px}.subject-detail-grid strong{display:block;margin-top:5px;font-size:11px;overflow-wrap:anywhere}.subject-detail-grid small{margin-top:4px}.subject-assessment-summary{font-size:10px;color:var(--text);padding:10px 0}.subject-quick-actions{gap:6px}.subject-quick-actions .btn,.attendance-buttons .btn{padding:8px 10px;font-size:10px}.assessment-list{display:flex;flex-direction:column;gap:7px;margin-top:8px}.assessment-row{display:flex;align-items:center;gap:8px;padding:10px;border:1px solid var(--line);border-radius:10px;background:#0d0b13;min-width:0}.assessment-row>div:first-child{flex:1;min-width:0}.assessment-row strong,.assessment-row span{display:block;overflow-wrap:anywhere}.assessment-row strong{font-size:11px}.assessment-row span{font-size:9px;color:var(--muted);margin-top:4px}.assessment-score{font-size:10px;white-space:nowrap;color:var(--purple)}.assessment-form-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.assessment-form-grid .field{margin-bottom:5px}.assessment-form-grid .field input,.assessment-form-grid .field select,.assessment-form-grid .field textarea{width:100%;background:#09080f;border:1px solid var(--line);border-radius:10px;padding:10px;color:var(--text);font-size:12px}.grade-scale-grid{max-width:760px}.attendance-subject{padding:14px;border:1px solid var(--line);background:#100e18;border-radius:13px}.attendance-subject-head{display:flex;justify-content:space-between;align-items:center;gap:10px}.attendance-subject-head strong,.attendance-subject-head span{display:block}.attendance-subject-head strong{font-size:12px;overflow-wrap:anywhere}.attendance-subject-head div>span{font-size:10px;color:var(--muted);margin-top:5px}.attendance-buttons{margin-top:12px}.attendance-warning{margin-top:10px;padding:10px;border-radius:9px;background:#3a1a28;border:1px solid #784050;color:#ffc4ce;font-size:10px;line-height:1.5}.grade-scale-grid .field{margin-bottom:8px}.semester-empty{padding:18px;color:var(--muted);font-size:12px}.attendance-edit-form{margin-top:12px;padding:12px;border:1px solid var(--line);border-radius:12px;background:#0d0b13}.attendance-edit-form .field{margin-bottom:8px}
+@media(max-width:850px){.semester-summary-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.semester-subject-grid{grid-template-columns:1fr}}
+@media(max-width:700px){.semester-goal{align-items:flex-start;flex-direction:column}.goal-controls{width:100%}.goal-controls input{flex:1;min-width:60px}.semester-mini-stat{padding:12px}.semester-mini-stat strong{font-size:22px}.subject-card-toggle{padding:13px}.subject-card-side{flex-direction:column;align-items:flex-end}.subject-detail-grid{grid-template-columns:1fr 1fr}.assessment-row{flex-wrap:wrap}.assessment-score{margin-left:auto}.attendance-buttons .btn{flex:1}.assessment-form-grid{grid-template-columns:1fr}}
+
+
+.workspace-tabs{display:flex;gap:7px;flex-wrap:wrap;padding:8px;margin-bottom:14px;border:1px solid #302a3e;border-radius:13px;background:#100e16}
+.workspace-tabs .btn{font-size:11px;padding:9px 12px}
+#workspaceExtraTab>.panel{margin-top:12px;background:linear-gradient(145deg,#15121d,#100e16)}
+
+.dashboard-priority-grid{margin:0 0 20px}.dashboard-priority-grid>.columns{margin:0}
+.dashboard-workspace-card{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:18px;padding:21px 23px;margin:0 0 25px;border:1px solid #514079;border-radius:19px;background:radial-gradient(ellipse at 0% 0%,#a78bfa24,transparent 58%),linear-gradient(120deg,#1b1730,#101827 78%);box-shadow:0 14px 34px #0002}
+.workspace-kicker{display:block;color:#c4b5fd;font-size:10px;font-weight:800;letter-spacing:1.6px}.dashboard-workspace-card h3{font:800 19px Manrope;letter-spacing:-.5px;margin:7px 0 5px}.dashboard-workspace-card p{font-size:12px;color:#a8a0c4;line-height:1.6;margin:0 0 12px}.workspace-feature-tags{display:flex;gap:7px;flex-wrap:wrap}.workspace-feature-tags span{border:1px solid #40365f;background:#211c36;color:#d8ceff;padding:6px 9px;border-radius:999px;font-size:10px;font-weight:700}.dashboard-workspace-card>.btn{white-space:nowrap;background:#a78bfa;border-color:#a78bfa;color:#100d1d}
+@media(max-width:700px){.dashboard-workspace-card{grid-template-columns:1fr;align-items:start;padding:18px}.dashboard-workspace-card>.btn{justify-self:start}}
+
+/* Workspace hub: clearer navigation for the shared study space. */
+.workspace-tabs{display:flex;gap:7px;flex-wrap:nowrap;overflow-x:auto;overscroll-behavior-x:contain;scrollbar-width:thin;padding:8px;margin-bottom:14px;border:1px solid #40365f;border-radius:14px;background:linear-gradient(120deg,#171329,#101827)}
+.workspace-tabs .btn{flex:0 0 auto;white-space:nowrap;border-radius:10px;font-size:11px;padding:10px 13px;background:#151d2d;border-color:#34415b;color:#b9c5dc}
+.workspace-tabs .btn.primary{background:linear-gradient(135deg,#b8a2ff,#8d79e8);border-color:#b8a2ff;color:#120e20;box-shadow:0 5px 16px #9b83ff26}
+.workspace-hub-intro{background:radial-gradient(ellipse at 100% 0%,#a78bfa20,transparent 48%),linear-gradient(130deg,#171d31,#111827)}
+.workspace-hub-intro p{color:var(--muted);font-size:12px;line-height:1.65;margin:7px 0 0}
+.workspace-quick-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin-top:15px}
+.workspace-quick-card{display:flex;flex-direction:column;align-items:flex-start;gap:6px;min-width:0;text-align:left;padding:14px;border:1px solid #34415b;border-radius:13px;background:#131e30;color:var(--text);cursor:pointer;transition:border-color .18s ease,transform .18s ease,background .18s ease}
+.workspace-quick-card:hover{border-color:#9a85ed;background:#1b2340;transform:translateY(-2px)}
+.workspace-quick-card strong{font-size:12px}.workspace-quick-card span{font-size:10px;color:var(--muted);line-height:1.4}
+.workspace-section{min-width:0}.workspace-member-row{align-items:center}
+#workspaceMembersList .task{align-items:center}
+#workspaceMembersList .tag{white-space:nowrap}
+@media(max-width:900px){.workspace-quick-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:700px){.workspace-tabs{margin-left:-2px;margin-right:-2px;padding:7px}.workspace-tabs .btn{padding:10px 12px}.workspace-quick-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
 </style>
+<link rel="stylesheet" href="./uniplanner-v2-foundation.css">
 </head>
 <body class="access-locked">
 <div id="accessGate"><section class="gate-card" aria-labelledby="gateTitle"><div class="logo" style="margin-bottom:18px">✦</div><h1 id="gateTitle">UniPlanner</h1><p>Your semester, in control. This workspace is private and requires an owner-approved account.</p><form id="gateLoginForm"><div class="field"><label for="accessEmail">Email</label><input id="accessEmail" type="email" autocomplete="username" placeholder="you@example.com" required></div><div class="field"><label for="accessPassword">Password</label><input id="accessPassword" type="password" autocomplete="current-password" placeholder="Your account password" required></div><button class="btn primary" id="accessSignIn" type="submit" style="width:100%">Sign in</button></form><button class="btn" id="accessSignOut" type="button" style="width:100%;margin-top:10px;display:none">Sign out</button><div id="accessMessage" class="gate-message" role="status" aria-live="polite">Checking approved access…</div><p style="font-size:11px;margin-bottom:0">Accounts are created by the owner. If you need access, contact them directly.</p></section></div>
@@ -404,6 +437,7 @@ a{ text-decoration-color:#a78bfa66 }
 <button class="nav" data-page="timetable"><span class="ico">◷</span> Timetable</button>
 <div class="navlabel">ACADEMICS</div>
 <button class="nav" data-page="grades"><span class="ico">▤</span> Grades & GPA</button>
+<button class="nav" data-page="attendance"><span class="ico">✓</span> Attendance</button>
 <button class="nav" data-page="faculty"><span class="ico">♙</span> Faculty</button>
 <button class="nav" data-page="collaborate"><span class="ico">♧</span> Study groups</button>
 <div class="navlabel">WELLBEING</div>
@@ -422,19 +456,23 @@ a{ text-decoration-color:#a78bfa66 }
   <div id="todayAttention" class="attention-items" aria-live="polite"></div>
   <button class="btn attention-link" type="button" data-goto="tasks">Open task list <span aria-hidden="true">↗</span></button>
 </section>
+<div class="dashboard-priority-grid"><div class="columns"><div class="panel"><div class="panel-head"><div><h3>Upcoming tasks</h3><div class="sub">Your next steps, all in one place</div></div><button class="btn" data-goto="tasks">View all →</button></div><div class="task-list" id="dashTasks"></div><div class="assigned-workspace-preview"><div class="panel-head" style="margin-top:15px;margin-bottom:9px"><div><h3>Assigned to you</h3><div class="sub">Shared workspace tasks, not duplicate copies</div></div></div><div class="task-list" id="dashAssignedWorkspaceTasks"><div class="empty">Sign in to see tasks classmates assign to you.</div></div></div></div><div style="display:flex;flex-direction:column;gap:15px"><div class="panel"><div class="panel-head"><div><h3>Month at a glance</h3><div class="sub" id="dashMonthLabel">Your calendar</div></div><button class="btn" data-goto="calendar">Open →</button></div><div id="miniCalendar"></div></div><div class="panel"><div class="panel-head"><div><h3>Quick launch</h3><div class="sub">Jump back into your workflow</div></div></div><div class="quick"><button data-goto="focus"><strong>◉ Focus session</strong><span>Protect study time</span></button><button data-goto="notes"><strong>✎ Capture a note</strong><span>Get it out of your head</span></button><button data-goto="grades"><strong>▤ Check GPA</strong><span>Track your progress</span></button><button data-goto="settings"><strong>☁ Backup & sync</strong><span>Keep data safe</span></button></div></div></div></div></div>
+<div class="dashboard-workspace-card"><div><span class="workspace-kicker">COLLABORATE WITH CLASSMATES</span><h3>Your shared study workspace</h3><p>Projects, shared tasks, notes and group conversations—kept together with your classmates.</p><div class="workspace-feature-tags"><span>▤ Projects</span><span>☷ Shared tasks</span><span>✎ Notes & resources</span><span>◌ Group chat</span></div></div><button class="btn primary" data-goto="collaborate">Open Study Groups ↗</button></div>
+
 <div class="dashboard-section-head"><div><span class="section-kicker">AT A GLANCE</span><h3>Your progress</h3></div><span class="section-note">Small steps add up.</span></div>
 <div class="stats"><div class="stat"><div class="stat-head">Open tasks <span>☷</span></div><div class="stat-num" id="statOpen">0</div><div class="stat-foot">Ready for your attention</div></div><div class="stat"><div class="stat-head">Due today <span>◷</span></div><div class="stat-num" id="statToday">0</div><div class="stat-foot">Keep an eye on these</div></div><div class="stat"><div class="stat-head">Overdue <span style="color:var(--red)">!</span></div><div class="stat-num" id="statLate">0</div><div class="stat-foot">No repeated alert spam</div></div><div class="stat"><div class="stat-head">Completed <span style="color:var(--mint)">✓</span></div><div class="stat-num" id="statDone">0</div><div class="stat-foot" id="statDoneFoot">Progress adds up</div></div></div>
-<div class="dashboard-section-head momentum-heading"><div><span class="section-kicker">KEEP YOUR MOMENTUM</span><h3>The week ahead</h3></div><span class="section-note">A little progress, every day.</span></div><div class="insight-grid"><div class="insight"><div class="kicker">THIS WEEK</div><div class="value" id="weekDone">0 / 0</div><div class="detail" id="weekDetail">Completed tasks this week</div><div class="insight-bar"><span id="weekBar"></span></div></div><div class="insight"><div class="kicker">NEXT 7 DAYS</div><div class="value" id="nextDeadlines">0</div><div class="detail" id="deadlineDetail">Upcoming deadlines</div></div><div class="insight"><div class="kicker">SEMESTER MOMENTUM</div><div class="value" id="momentumValue">Ready</div><div class="detail" id="momentumDetail">Small steps add up</div></div></div><div class="columns"><div class="panel"><div class="panel-head"><div><h3>Upcoming tasks</h3><div class="sub">Your next steps, all in one place</div></div><button class="btn" data-goto="tasks">View all →</button></div><div class="task-list" id="dashTasks"></div></div><div style="display:flex;flex-direction:column;gap:15px"><div class="panel"><div class="panel-head"><div><h3>Month at a glance</h3><div class="sub" id="dashMonthLabel">Your calendar</div></div><button class="btn" data-goto="calendar">Open →</button></div><div id="miniCalendar"></div></div><div class="panel"><div class="panel-head"><div><h3>Quick launch</h3><div class="sub">Jump back into your workflow</div></div></div><div class="quick"><button data-goto="focus"><strong>◉ Focus session</strong><span>Protect study time</span></button><button data-goto="notes"><strong>✎ Capture a note</strong><span>Get it out of your head</span></button><button data-goto="grades"><strong>▤ Check GPA</strong><span>Track your progress</span></button><button data-goto="settings"><strong>☁ Backup & sync</strong><span>Keep data safe</span></button></div></div></div></div>
+<div class="dashboard-section-head semester-heading"><div><span class="section-kicker">YOUR SEMESTER</span><h3>Semester tracker</h3></div><button class="btn" data-goto="attendance">Track attendance →</button></div><div class="semester-summary-grid"><div class="semester-mini-stat"><span>Credits</span><strong id="semesterCredits">17</strong><small>Across your subjects</small></div><div class="semester-mini-stat"><span>Semester GPA</span><strong id="semesterGpa">—</strong><small>Based on graded subjects</small></div><div class="semester-mini-stat"><span>Attendance</span><strong id="semesterAttendance">—</strong><small>Across recorded sessions</small></div><div class="semester-mini-stat"><span>Tracking progress</span><strong id="semesterProgress">0%</strong><small id="semesterProgressDetail">Track your semester activity</small></div></div><div class="semester-goal panel"><div><span class="section-kicker">PERSONAL STUDY GOAL</span><h3>Set your target</h3><p class="sub">Your goal stays separate from automatically calculated tracking progress.</p><p class="sub" id="semesterGoalStatus">Set a goal to compare your progress.</p></div><div class="goal-controls"><label for="semesterGoalInput">Goal (%)</label><input id="semesterGoalInput" type="number" min="0" max="100" step="1" value="70"><button class="btn primary" id="saveSemesterGoal" type="button">Save goal</button></div></div><div id="semesterSubjects" class="semester-subject-grid"></div><div class="panel semester-upcoming-panel"><div class="panel-head"><div><h3>Upcoming assessments</h3><div class="sub">Assessment due dates alongside your task deadlines</div></div><button class="btn" data-goto="grades">Manage →</button></div><div id="semesterUpcomingAssessments" class="task-list"></div></div><div class="dashboard-section-head momentum-heading"><div><span class="section-kicker">KEEP YOUR MOMENTUM</span><h3>The week ahead</h3></div><span class="section-note">A little progress, every day.</span></div><div class="insight-grid"><div class="insight"><div class="kicker">THIS WEEK</div><div class="value" id="weekDone">0 / 0</div><div class="detail" id="weekDetail">Completed tasks this week</div><div class="insight-bar"><span id="weekBar"></span></div></div><div class="insight"><div class="kicker">NEXT 7 DAYS</div><div class="value" id="nextDeadlines">0</div><div class="detail" id="deadlineDetail">Upcoming deadlines</div></div><div class="insight"><div class="kicker">SEMESTER MOMENTUM</div><div class="value" id="momentumValue">Ready</div><div class="detail" id="momentumDetail">Small steps add up</div></div></div>
 </section>
 <section class="page" id="page-calendar"><div class="welcome"><div><div class="eyebrow">PLAN AHEAD</div><h2>Your calendar.</h2><p>Choose a day to see its tasks or create a new one.</p></div><button class="btn primary" id="addCalendar">＋ Add task</button></div><div class="panel"><div class="panel-head"><div><h3 id="monthHeading">Calendar</h3><div class="sub">Deadlines are shown on their due dates.</div></div><div class="calendar-controls"><button class="iconbtn" id="prevMonth" aria-label="Previous month">←</button><button class="btn" id="todayBtn">Today</button><button class="iconbtn" id="nextMonth" aria-label="Next month">→</button></div></div><div id="fullCalendar"></div></div><div class="panel" style="margin-top:15px"><div class="panel-head"><div><h3 id="selectedDateTitle">Selected day</h3><div class="sub">Tasks for this date</div></div><button class="btn" id="addSelectedDate">＋ Add for this day</button></div><div id="selectedDayTasks" class="task-list"></div></div></section>
-<section class="page" id="page-tasks"><div class="welcome"><div><div class="eyebrow">STAY ON TOP OF IT</div><h2>Tasks & deadlines.</h2><p>One source of truth for your academic commitments.</p></div><button class="btn primary" id="addTasks">＋ Add task</button></div><div class="planning-summary" id="planningSummary" aria-label="Task workload summary"></div><div class="panel"><div class="row task-toolbar" style="margin-bottom:15px"><input class="search" id="taskSearch" placeholder="Search title, course, or details…" aria-label="Search tasks" style="flex:1;min-width:180px"><select id="taskFilter" class="search" aria-label="Filter tasks" style="width:auto;min-width:145px"><option value="all">All tasks</option><option value="open">Open</option><option value="today">Due today</option><option value="overdue">Overdue</option><option value="next7">Next 7 days</option><option value="priority-high">High priority</option><option value="done">Completed</option></select><select id="categoryFilter" class="search" aria-label="Filter by category" style="width:auto;min-width:130px"><option value="all">All categories</option><option>Quiz</option><option>Assignment</option><option>Group</option><option>Presentation</option><option>Exam</option><option>Other</option></select><select id="taskSort" class="search" aria-label="Sort tasks" style="width:auto;min-width:140px"><option value="date">Sort: Due date</option><option value="priority">Sort: Priority</option><option value="course">Sort: Course</option></select></div><div id="allTasks" class="task-list"></div></div></section>
+<section class="page" id="page-tasks"><div class="welcome"><div><div class="eyebrow">STAY ON TOP OF IT</div><h2>Tasks & deadlines.</h2><p>One source of truth for your academic commitments.</p></div><button class="btn primary" id="addTasks">＋ Add task</button></div><div class="planning-summary" id="planningSummary" aria-label="Task workload summary"></div><div class="panel"><div class="row task-toolbar" style="margin-bottom:15px"><input class="search" id="taskSearch" placeholder="Search title, course, or details…" aria-label="Search tasks" style="flex:1;min-width:180px"><select id="taskFilter" class="search" aria-label="Filter tasks" style="width:auto;min-width:145px"><option value="all">All tasks</option><option value="open">Open</option><option value="today">Due today</option><option value="overdue">Overdue</option><option value="next7">Next 7 days</option><option value="priority-high">High priority</option><option value="done">Completed</option></select><select id="categoryFilter" class="search" aria-label="Filter by category" style="width:auto;min-width:130px"><option value="all">All categories</option><option>Quiz</option><option>Assignment</option><option>Group</option><option>Presentation</option><option>Exam</option><option>Other</option></select><select id="taskSort" class="search" aria-label="Sort tasks" style="width:auto;min-width:140px"><option value="date">Sort: Due date</option><option value="priority">Sort: Priority</option><option value="course">Sort: Course</option></select></div><div id="allTasks" class="task-list"></div></div><div class="panel assigned-workspace-panel" id="assignedWorkspaceTasksPanel" style="margin-top:15px"><div class="panel-head"><div><h3>Assigned from workspaces</h3><div class="sub">Tasks assigned to you by classmates appear here as the same shared task.</div></div></div><div id="assignedWorkspaceTasksList" class="task-list"><div class="empty">Sign in to see your assigned workspace tasks.</div></div></div></section>
 <section class="page" id="page-timetable"><div class="welcome"><div><div class="eyebrow">WEEKLY RHYTHM</div><h2>Timetable.</h2><p>Keep your class schedule easy to find.</p></div><button class="btn primary" id="addClass">＋ Add class</button></div><div class="panel"><div class="panel-head"><div><h3>Your weekly schedule</h3><div class="sub">Times are displayed in your local timezone.</div></div></div><div id="timetableList" class="task-list"></div></div></section>
 <section class="page" id="page-grades"><div class="welcome"><div><div class="eyebrow">ACADEMIC PROGRESS</div><h2>Grades & GPA.</h2><p>Use your university's grading scale for accurate results.</p></div><button class="btn primary" id="addGrade">＋ Add course</button></div><div class="stats"><div class="stat"><div class="stat-head">Courses</div><div class="stat-num" id="gradeCount">0</div><div class="stat-foot">Courses tracked</div></div><div class="stat"><div class="stat-head">Credit hours</div><div class="stat-num" id="creditCount">0</div><div class="stat-foot">Total credits entered</div></div><div class="stat"><div class="stat-head">Estimated GPA</div><div class="stat-num" id="gpaValue">—</div><div class="stat-foot">Weighted by credit hours</div></div><div class="stat"><div class="stat-head">Scale</div><div class="stat-num">4.0</div><div class="stat-foot">Editable course grade points</div></div></div><div class="panel"><div class="panel-head"><div><h3>Course results</h3><div class="sub">Enter the grade points from your university's official scale.</div></div></div><div id="gradesList" class="task-list"></div></div></section>
+<section class="page" id="page-attendance"><div class="welcome"><div><div class="eyebrow">SHOW UP CONSISTENTLY</div><h2>Attendance.</h2><p>Record classes in seconds, correct past sessions and track the 75% default minimum.</p></div><button class="btn primary" id="addAttendance" type="button">＋ Add / edit session</button></div><div class="stats"><div class="stat"><div class="stat-head">Overall attendance</div><div class="stat-num" id="attendanceOverall">—</div><div class="stat-foot">Across recorded classes</div></div><div class="stat"><div class="stat-head">Sessions recorded</div><div class="stat-num" id="attendanceSessions">0</div><div class="stat-foot">Present or absent sessions</div></div><div class="stat"><div class="stat-head">Subjects at risk</div><div class="stat-num" id="attendanceAtRisk">0</div><div class="stat-foot">Below or near the threshold</div></div><div class="stat"><div class="stat-head">Minimum target</div><div class="stat-num" id="attendanceThreshold">75%</div><div class="stat-foot">Default policy setting</div></div></div><div class="panel"><div class="panel-head"><div><h3>Record today's classes</h3><div class="sub">A second tap for the same subject and date updates the record rather than duplicating it.</div></div></div><div id="attendanceQuickList" class="task-list"></div></div><div class="panel" style="margin-top:15px"><div class="panel-head"><div><h3>Attendance history</h3><div class="sub">Edit a record to correct its date, subject or status.</div></div></div><div id="attendanceHistory" class="task-list"></div></div></section>
 <section class="page" id="page-faculty"><div class="welcome"><div><div class="eyebrow">PEOPLE & SUPPORT</div><h2>Faculty directory.</h2><p>Keep instructor contacts and office-hour details handy.</p></div><button class="btn primary" id="addFaculty">＋ Add faculty</button></div><div class="panel"><div class="panel-head"><div><h3>Your directory</h3><div class="sub">Contact information stays private in this browser unless you enable cloud sync.</div></div></div><div id="facultyList" class="task-list"></div></div></section>
-<section class="page" id="page-collaborate"><div class="welcome"><div><div class="eyebrow">WORK BETTER TOGETHER</div><h2>Study groups.</h2><p>Create a shared space, invite registered classmates, and manage group deadlines together.</p></div></div><div class="columns"><div class="panel"><div class="panel-head"><div><h3>Your workspaces</h3><div class="sub">Shared spaces linked to your signed-in account.</div></div></div><div class="field"><label for="workspaceName">New workspace name</label><input id="workspaceName" maxlength="80" placeholder="e.g. Software Engineering Project"></div><button class="btn primary" id="createWorkspaceBtn">＋ Create workspace</button><hr class="divider"><div id="workspaceList" class="task-list"><div class="empty">Sign in under Settings & sync to use study groups.</div></div></div><div class="panel"><div class="panel-head"><div><h3 id="workspaceHeading">Shared tasks</h3><div class="sub" id="workspaceSub">Choose a workspace to get started.</div></div></div><div id="workspaceContent"><div class="empty">Your group tasks will appear here.</div></div></div></div></section>
+<section class="page" id="page-collaborate"><div class="welcome"><div><div class="eyebrow">WORK BETTER TOGETHER</div><h2>Study groups.</h2><p>Create a shared space, invite registered classmates, and manage group deadlines together.</p></div></div><div class="panel" id="workspaceInvitationsPanel" style="margin-bottom:14px;display:none"><h3>Invitations for you</h3><div class="sub">Accept an invitation to join a classmate’s workspace.</div><div id="workspaceInvitationsList" class="task-list" style="margin-top:12px"></div></div><div class="panel" id="workspaceDiscoveryPanel" style="margin-bottom:14px"><div class="panel-head"><div><h3>Discover study workspaces</h3><div class="sub">Find a classmate’s discoverable workspace and request to join.</div></div></div><div class="row" style="margin-bottom:12px"><input class="search" id="workspaceDiscoverySearch" maxlength="80" placeholder="Search workspace names…" aria-label="Search study workspaces" style="flex:1;min-width:180px"><button class="btn" id="workspaceDiscoverySearchBtn" type="button">Search</button></div><div id="workspaceDiscoveryList" class="task-list"><div class="empty">Sign in to discover available study workspaces.</div></div></div><div class="columns"><div class="panel"><div class="panel-head"><div><h3>Your workspaces</h3><div class="sub">Shared spaces linked to your signed-in account.</div></div></div><div class="field"><label for="workspaceName">New workspace name</label><input id="workspaceName" maxlength="80" placeholder="e.g. Software Engineering Project"></div><button class="btn primary" id="createWorkspaceBtn">＋ Create workspace</button><hr class="divider"><div id="workspaceList" class="task-list"><div class="empty">Sign in under Settings & sync to use study groups.</div></div></div><div class="panel"><div class="panel-head"><div><h3 id="workspaceHeading">Shared tasks</h3><div class="sub" id="workspaceSub">Choose a workspace to get started.</div></div></div><div id="workspaceContent"><div class="empty">Your group tasks will appear here.</div></div></div></div></section>
 <section class="page" id="page-focus"><div class="welcome"><div><div class="eyebrow">ONE THING AT A TIME</div><h2>Focus room.</h2><p>Small, protected sessions beat distracted hours.</p></div></div><div class="columns"><div class="panel timer"><div class="eyebrow">POMODORO TIMER</div><div class="timer-ring"><div><div class="small-label" id="timerModeLabel">FOCUS SESSION</div><div class="timer-face" id="timerFace">25:00</div><div class="small-label" id="timerState">Ready when you are</div></div></div><div class="row timer-controls"><button class="btn primary" id="timerStart">Start focus</button><button class="btn" id="timerReset">Reset</button><button class="btn" id="timerBreak">Break · 5m</button></div><div class="sub" style="margin-top:18px">Completed sessions: <b id="sessionsDone">0</b></div></div><div class="panel"><h3>Make it yours</h3><p class="sub" style="margin-bottom:20px">Choose a focus duration. The timer runs only while this page is open; it won't send repeated notifications.</p><div class="field"><label for="focusMinutes">Focus duration (minutes)</label><input id="focusMinutes" type="number" min="1" max="180" value="25"></div><div class="field"><label for="breakMinutes">Break duration (minutes)</label><input id="breakMinutes" type="number" min="1" max="60" value="5"></div><div class="divider"></div><p class="sub">Tip: add one specific task before starting, then give it your full attention.</p></div></div></section>
 <section class="page" id="page-notes"><div class="welcome"><div><div class="eyebrow">THINK OUT LOUD</div><h2>Quick notes.</h2><p>Capture ideas before they disappear.</p></div><button class="btn primary" id="addNote">＋ New note</button></div><div class="panel"><div class="field"><label for="scratchpad">Scratchpad · auto-saves on this device</label><textarea id="scratchpad" placeholder="Lecture links, room numbers, questions for your instructor…" style="min-height:180px"></textarea></div><div class="row"><span class="sub" id="noteStatus">Saved locally</span><button class="btn" id="clearScratch">Clear scratchpad</button></div><hr class="divider"><div class="panel-head"><div><h3>Saved notes</h3><div class="sub">Separate notes for things you'll want to find later.</div></div></div><div id="notesList" class="note-list"></div></div></section>
-<section class="page" id="page-settings"><div class="welcome"><div><div class="eyebrow">YOUR PREFERENCES</div><h2>Settings & sync.</h2><p>Choose how UniPlanner stores and protects your work.</p></div></div><div class="columns"><div class="panel"><h3>Data & backup</h3><p class="sub" style="margin-bottom:18px">Your planner starts fresh. Data is stored locally in this browser by default.</p><div class="row"><button class="btn primary" id="exportSettings">Export JSON backup</button><button class="btn" id="importBtn">Import backup</button><input type="file" id="importFile" accept="application/json,.json" hidden></div><hr class="divider"><div class="field"><label for="reminderMode">Reminder behavior</label><select id="reminderMode"><option value="off">Off — no desktop notifications</option><option value="once">One notification per task (while this page is open)</option></select></div><p class="sub">Notifications are off by default. A past-due task is never repeatedly alerted. Browser permission is requested only if you turn reminders on.</p><hr class="divider"><div class="field"><label for="displayName">Your display name (optional)</label><input id="displayName" placeholder="What should we call you?"></div><button class="btn" id="savePrefs">Save preferences</button></div><div class="panel"><h3>Cross-device sync</h3><p class="sub" style="margin-bottom:18px">GitHub Pages is static hosting, so shared sync needs a backend. This app supports a Supabase project when you configure its public URL and anon key below. Never paste a service-role key here.</p><div class="field"><label for="supabaseUrl">Connected project</label><input id="supabaseUrl" autocomplete="off" readonly></div><div class="field"><label for="supabaseKey">Public client key</label><input id="supabaseKey" autocomplete="off" readonly></div><div class="field"><label for="syncEmail">Account email</label><input id="syncEmail" type="email" placeholder="you@example.com" autocomplete="email"></div><div class="field"><label for="syncPassword">Password</label><input id="syncPassword" type="password" placeholder="At least 8 characters" autocomplete="current-password"></div><div class="row"><button class="btn primary" id="signInBtn">Sign in</button><button class="btn" id="signOutBtn">Sign out</button></div><div class="divider"></div><div class="row"><span class="status" id="syncStatus" style="color:var(--muted)">Cloud not configured</span><button class="btn" id="syncNowBtn">Sync now</button></div><p class="sub" style="margin-top:14px">Before use: create the database table and row-level security policies using <code>supabase-schema.sql</code> in the project. Sync is not active until configured.</p></div></div></section>
+<section class="page" id="page-settings"><div class="welcome"><div><div class="eyebrow">YOUR PREFERENCES</div><h2>Settings & sync.</h2><p>Choose how UniPlanner stores and protects your work.</p></div></div><div class="columns"><div class="panel"><h3>Data & backup</h3><p class="sub" style="margin-bottom:18px">Your planner starts fresh. Data is stored locally in this browser by default.</p><div class="row"><button class="btn primary" id="exportSettings">Export JSON backup</button><button class="btn" id="importBtn">Import backup</button><input type="file" id="importFile" accept="application/json,.json" hidden></div><hr class="divider"><div class="field"><label for="reminderMode">Deadline notifications</label><select id="reminderMode"><option value="off">Off</option><option value="once">Enable notifications</option></select></div><div class="field"><label for="reminderLeadMinutes">Upcoming deadline reminder</label><select id="reminderLeadMinutes"><option value="10">10 minutes before</option><option value="30">30 minutes before</option><option value="60">1 hour before</option><option value="1440">1 day before</option></select></div><div class="field"><label><input id="overdueAlerts" type="checkbox" style="width:auto;margin-right:8px"> Notify me about overdue tasks (once per task per day)</label></div><div class="field"><label><input id="groupNotifications" type="checkbox" style="width:auto;margin-right:8px"> Notify me about new Study Group activity</label></div><p class="sub">Deadline alerts are checked while UniPlanner is open. Group activity alerts require a signed-in session and Supabase Realtime. Fully closed-page alerts need background push setup.</p><hr class="divider"><div class="field"><label for="displayName">Your display name (optional)</label><input id="displayName" placeholder="What should we call you?"></div><button class="btn" id="savePrefs">Save preferences</button></div><div class="panel"><h3>Cross-device sync</h3><p class="sub" style="margin-bottom:18px">GitHub Pages is static hosting, so shared sync needs a backend. This app supports a Supabase project when you configure its public URL and anon key below. Never paste a service-role key here.</p><div id="supabaseConfigFields" style="display:none"><div class="field"><label for="supabaseUrl">Connected project</label><input id="supabaseUrl" autocomplete="off" readonly></div><div class="field"><label for="supabaseKey">Public client key</label><input id="supabaseKey" autocomplete="off" readonly></div></div><div class="field"><label for="syncEmail">Account email</label><input id="syncEmail" type="email" placeholder="you@example.com" autocomplete="email"></div><div class="field"><label for="syncPassword">Password</label><input id="syncPassword" type="password" placeholder="At least 8 characters" autocomplete="current-password"></div><div class="row"><button class="btn primary" id="signInBtn">Sign in</button><button class="btn" id="signOutBtn">Sign out</button></div><div class="divider"></div><div class="row"><span class="status" id="syncStatus" style="color:var(--muted)">Cloud not configured</span><button class="btn" id="syncNowBtn">Sync now</button></div><p class="sub" style="margin-top:14px">Before use: create the database table and row-level security policies using <code>supabase-schema.sql</code> in the project. Sync is not active until configured.</p></div></div></section>
 <section class="page" id="page-admin"><div class="welcome"><div><div class="eyebrow">OWNER CONTROLS</div><h2>Admin panel.</h2><p>Invite users, approve accounts, revoke site access, and manage workspace memberships. Account records and planner data are never deleted here.</p></div><button class="btn" id="adminRefresh">↻ Refresh</button></div><div class="panel" style="margin-bottom:16px"><div class="panel-head"><div><h3>Invite a user</h3><div class="sub">Send a secure email invitation. They choose their own password, then wait for your approval.</div></div></div><form id="adminInviteForm" style="padding:16px;display:flex;gap:10px;align-items:end;flex-wrap:wrap"><label style="display:block;flex:1;min-width:220px"><span class="sub" style="display:block;margin-bottom:6px">Email address</span><input id="adminInviteEmail" type="email" autocomplete="email" required maxlength="254" placeholder="person@example.com" style="width:100%;background:var(--panel2);color:var(--text);border:1px solid var(--line);border-radius:10px;padding:11px"></label><button class="btn primary" id="adminInviteSubmit" type="submit">Send invitation</button></form><div id="adminInviteMessage" class="sub" role="status" aria-live="polite" style="padding:0 16px 16px">Invitation links let users set their own password. Access remains pending until you approve them.</div></div><div class="panel" style="margin-bottom:16px"><div class="panel-head"><div><h3>Website access</h3><div class="sub">New accounts appear as pending. Approving or revoking access takes effect across UniPlanner.</div></div><span class="status" id="adminUserCount">Loading…</span></div><div id="adminUsers"><div class="empty">Loading accounts…</div></div></div><div class="panel"><div class="panel-head"><div><h3>Workspace memberships</h3><div class="sub">Remove a member from one workspace without blocking their UniPlanner account. Workspace owners are protected.</div></div></div><div id="adminMemberships"><div class="empty">Loading memberships…</div></div></div></section>
 <div class="footer">UniPlanner · Keep your semester moving, one step at a time.</div>
 </main></div></div>
@@ -442,33 +480,109 @@ a{ text-decoration-color:#a78bfa66 }
 <div class="toastbox" id="toastbox" aria-live="polite"></div>
 <script>
 (()=>{'use strict';
-const KEY='uniplanner_v2_data',PREF='uniplanner_v2_prefs',SCHEMA=1,SUPABASE_URL='https://rigsjtbaoxkdbumwuhdn.supabase.co',SUPABASE_KEY='sb_publishable_G6Fzf6w-Ipobl6mvrBk_TQ_NtM8lLXk';
+const KEY='uniplanner_test_v2_data',PREF='uniplanner_test_v2_prefs',SCHEMA=1,SUPABASE_URL='https://rigsjtbaoxkdbumwuhdn.supabase.co',SUPABASE_KEY='sb_publishable_G6Fzf6w-Ipobl6mvrBk_TQ_NtM8lLXk';
 const $=id=>document.getElementById(id);
 const today=()=>{const d=new Date();return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0')};
 const uid=()=>crypto.randomUUID?crypto.randomUUID():'id-'+Date.now().toString(36)+'-'+Math.random().toString(36).slice(2);
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-const blank=()=>({schema:SCHEMA,tasks:[],classes:[],grades:[],faculty:[],notes:[],scratchpad:'',focusSessions:0,reminded:[]});
-let workspaceLoadSeq=0,data=blank(),prefs={reminderMode:'off',displayName:'',supabaseUrl:SUPABASE_URL,supabaseKey:SUPABASE_KEY},activeWorkspaceId=null,workspaces=[],month=new Date(new Date().getFullYear(),new Date().getMonth(),1),selectedDate=today(),editing=null,modalType='',timer=null,remaining=1500,mode='focus',started=false,supa=null,user=null,accessGranted=false,accessCheckBusy=false;
+const blank=()=>({schema:SCHEMA,tasks:[],classes:[],grades:[],assessments:[],attendance:[],gradingScale:{aMin:90,bMin:80,cMin:70,dMin:60,aPoints:4,bPoints:3,cPoints:2,dPoints:1},attendanceMinimum:75,semesterGoal:70,faculty:[],notes:[],scratchpad:'',focusSessions:0,reminded:[]});
+const FIRST_SEMESTER_SUBJECTS=[{course:'Programming Fundamentals',credits:4,theory:3,practical:1},{course:'Application of Information & Communication Technologies',credits:3,theory:2,practical:1},{course:'Functional English',credits:3,theory:3,practical:0},{course:'Islamic Studies',credits:2,theory:2,practical:0},{course:'Applied Physics',credits:3,theory:2,practical:1},{course:'Ideology and Constitution of Pakistan',credits:2,theory:2,practical:0}];
+function ensureFirstSemesterSubjects(){if(data.firstSemesterSubjectsVersion>=1)return;for(const subject of FIRST_SEMESTER_SUBJECTS){if(!data.grades.some(g=>(g.course||'').trim().toLowerCase()===subject.course.toLowerCase()))data.grades.push({id:uid(),course:subject.course,credits:subject.credits,points:'',letter:'',semester:1,createdAt:new Date().toISOString()})}data.firstSemesterSubjectsVersion=1;}
+let workspaceLoadSeq=0,data=blank(),prefs={reminderMode:'off',reminderLeadMinutes:30,overdueAlerts:false,groupNotifications:false,displayName:'',supabaseUrl:SUPABASE_URL,supabaseKey:SUPABASE_KEY},activeWorkspaceId=null,workspaces=[],month=new Date(new Date().getFullYear(),new Date().getMonth(),1),selectedDate=today(),editing=null,modalType='',timer=null,remaining=1500,mode='focus',started=false,supa=null,user=null,accessGranted=false,accessCheckBusy=false;
 function toast(msg,type='ok'){const n=document.createElement('div');n.className='toast '+(type==='error'?'error':'ok');n.textContent=msg;$('toastbox').append(n);setTimeout(()=>n.remove(),3800)}
-function save(){try{localStorage.setItem(KEY,JSON.stringify(data));localStorage.setItem('uniplanner_v2_updated',String(Date.now()));$('saveStatus').innerHTML='<i class="dot"></i> Saved on this device';}catch(e){$('saveStatus').textContent='Save failed — export a backup';toast('Could not save locally. Export a backup and check browser storage settings.','error');console.error(e)}scheduleReminderCheck();renderStats();renderTasks();renderCalendars();renderClasses();renderGrades();renderFaculty();renderNotes();scheduleCloudPush()}
-function persistPrefsFromForm(){prefs.reminderMode=$('reminderMode').value;prefs.displayName=$('displayName').value.trim();prefs.supabaseUrl=SUPABASE_URL;prefs.supabaseKey=SUPABASE_KEY;$('supabaseUrl').value=SUPABASE_URL;$('supabaseKey').value=SUPABASE_KEY;try{localStorage.setItem(PREF,JSON.stringify(prefs))}catch{}scheduleReminderCheck()}
+function save(){try{localStorage.setItem(KEY,JSON.stringify(data));localStorage.setItem('uniplanner_test_v2_updated',String(Date.now()));$('saveStatus').innerHTML='<i class="dot"></i> Saved on this device';}catch(e){$('saveStatus').textContent='Save failed — export a backup';toast('Could not save locally. Export a backup and check browser storage settings.','error');console.error(e)}scheduleReminderCheck();renderStats();renderTasks();renderCalendars();renderClasses();renderGrades();renderFaculty();renderNotes();window.UniPlannerSemester?.render();scheduleCloudPush()}
+function persistPrefsFromForm(){prefs.reminderMode=$('reminderMode').value;prefs.reminderLeadMinutes=Math.max(10,Math.min(1440,Number($('reminderLeadMinutes')?.value)||30));prefs.overdueAlerts=!!$('overdueAlerts')?.checked;prefs.groupNotifications=!!$('groupNotifications')?.checked;prefs.displayName=$('displayName').value.trim();prefs.supabaseUrl=SUPABASE_URL;prefs.supabaseKey=SUPABASE_KEY;$('supabaseUrl').value=SUPABASE_URL;$('supabaseKey').value=SUPABASE_KEY;try{localStorage.setItem(PREF,JSON.stringify(prefs))}catch{}scheduleReminderCheck()}
 function savePrefs(){persistPrefsFromForm();initSupabase();toast('Preferences saved.')}
-function load(){try{const raw=localStorage.getItem(KEY);if(raw){const p=JSON.parse(raw);if(p&&p.schema===SCHEMA&&Array.isArray(p.tasks))data={...blank(),...p}}}catch(e){toast('Saved data could not be read. Export/restore a known backup if needed.','error');console.error(e)}try{prefs={...prefs,...JSON.parse(localStorage.getItem(PREF)||'{}')}}catch{}prefs.supabaseUrl=SUPABASE_URL;prefs.supabaseKey=SUPABASE_KEY;$('reminderMode').value=prefs.reminderMode;$('displayName').value=prefs.displayName;$('supabaseUrl').value=SUPABASE_URL;$('supabaseKey').value=SUPABASE_KEY;$('scratchpad').value=data.scratchpad||'';$('sessionsDone').textContent=data.focusSessions||0;initSupabase()}
-function switchPage(id){document.querySelectorAll('.page').forEach(p=>p.classList.toggle('active',p.id==='page-'+id));document.querySelectorAll('.nav').forEach(b=>b.classList.toggle('active',b.dataset.page===id));if(id==='calendar')renderCalendars();if(id==='admin')loadAdminPanel();window.scrollTo({top:0,behavior:'smooth'})}
+function load(){try{const raw=localStorage.getItem(KEY);if(raw){const p=JSON.parse(raw);if(p&&p.schema===SCHEMA&&Array.isArray(p.tasks))data={...blank(),...p}}}catch(e){toast('Saved data could not be read. Export/restore a known backup if needed.','error');console.error(e)}ensureFirstSemesterSubjects();try{prefs={...prefs,...JSON.parse(localStorage.getItem(PREF)||'{}')}}catch{}prefs.supabaseUrl=SUPABASE_URL;prefs.supabaseKey=SUPABASE_KEY;$('reminderMode').value=prefs.reminderMode;$('reminderLeadMinutes').value=String(prefs.reminderLeadMinutes||30);$('overdueAlerts').checked=!!prefs.overdueAlerts;$('groupNotifications').checked=!!prefs.groupNotifications;$('displayName').value=prefs.displayName;$('supabaseUrl').value=SUPABASE_URL;$('supabaseKey').value=SUPABASE_KEY;$('scratchpad').value=data.scratchpad||'';$('sessionsDone').textContent=data.focusSessions||0;initSupabase()}
+function switchPage(id){document.querySelectorAll('.page').forEach(p=>p.classList.toggle('active',p.id==='page-'+id));document.querySelectorAll('.nav').forEach(b=>b.classList.toggle('active',b.dataset.page===id));if(id==='calendar')renderCalendars();if(id==='admin')loadAdminPanel();if(id==='tasks'||id==='dashboard')void renderAssignedWorkspaceTasks();window.scrollTo({top:0,behavior:'smooth'})}
 document.querySelectorAll('[data-page]').forEach(b=>b.addEventListener('click',()=>switchPage(b.dataset.page)));document.querySelectorAll('[data-goto]').forEach(b=>b.addEventListener('click',()=>switchPage(b.dataset.goto)));
 function openModal(type,id=null,defaults={}){editing=id;modalType=type;const old=id?({task:data.tasks,class:data.classes,grade:data.grades,faculty:data.faculty,note:data.notes}[type]||[]).find(x=>x.id===id):null;const v={...(type==='task'?{category:'Assignment',priority:'Medium',date:today()}:{}),...(old||{}),...defaults};const defs={
 task:{title:'Task title',fields:[['title','Title','text','e.g. Data Structures assignment',true],['category','Category','select',['Assignment','Quiz','Group','Presentation','Exam','Other'],true],['date','Due date','date',today(),true],['time','Due time','time','',false],['priority','Priority','select',['High','Medium','Low'],true],['course','Course / subject','text','e.g. CS-201',false],['description','Details / links','textarea','Notes, instructions or URLs…',false]]},
 class:{title:'Add a class',fields:[['course','Course name','text','e.g. Database Systems',true],['day','Day','select',['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'],true],['start','Start time','time','',true],['end','End time','time','',true],['room','Room / location','text','e.g. CS Lab 2',false],['teacher','Instructor','text','',false]]},
-grade:{title:'Add a course grade',fields:[['course','Course name','text','e.g. Algorithms',true],['credits','Credit hours','number','3',true],['points','Grade points (0–4)', 'number','3.5',true],['letter','Letter grade (optional)','text','A-',false]]},
+grade:{title:'Add a course grade',fields:[['course','Course name','text','e.g. Algorithms',true],['credits','Credit hours','number','3',true],['points','Grade points (0–4)', 'number','Leave blank until graded',false],['letter','Letter grade (optional)','text','A-',false]]},
 faculty:{title:'Add faculty contact',fields:[['name','Name','text','Instructor name',true],['course','Course / department','text','',false],['email','Email','email','',false],['office','Office / office hours','text','',false],['notes','Notes','textarea','',false]]},
 note:{title:'New note',fields:[['title','Title','text','e.g. Questions for lecturer',true],['body','Note','textarea','Write your note…',true]]}};
-const def=defs[type];$('modalTitle').textContent=old?'Edit '+def.title.replace(/^Add a? ?/,''):def.title;$('modalFields').innerHTML=def.fields.map(([key,label,kind,arg,req])=>{let val=v[key]??'';if(kind==='select'){return '<div class="field"><label for="f_'+key+'">'+esc(label)+'</label><select id="f_'+key+'" name="'+key+'" '+(req?'required':'')+'>'+arg.map(opt=>'<option '+(String(val).toLowerCase()===opt.toLowerCase()?'selected':'')+'>'+esc(opt)+'</option>').join('')+'</select></div>'}let inputType=['text','date','time','number','email'].includes(kind)?kind:'text';if(kind==='textarea')return '<div class="field"><label for="f_'+key+'">'+esc(label)+'</label><textarea id="f_'+key+'" name="'+key+'" placeholder="'+esc(arg)+'" '+(req?'required':'')+'>'+esc(val)+'</textarea></div>';return '<div class="field"><label for="f_'+key+'">'+esc(label)+'</label><input id="f_'+key+'" name="'+key+'" type="'+inputType+'" '+(kind==='number'?'min="0" max="'+(key==='points'?'4':'1000')+'" step="'+(key==='points'?'.01':'1')+'"':'')+' value="'+esc(val|| (key==='date'&&type==='task'?defaults.date||'': ''))+'" placeholder="'+esc(arg)+'" '+(req?'required':'')+'></div>'}).join('');$('modalWrap').classList.add('open');setTimeout(()=> $('modalFields').querySelector('input,select,textarea')?.focus(),30)}
+const def=defs[type];$('modalTitle').textContent=old?'Edit '+def.title.replace(/^Add a? ?/,''):def.title;$('modalFields').innerHTML=def.fields.map(([key,label,kind,arg,req])=>{let val=v[key]??'';if(kind==='select'){return '<div class="field"><label for="f_'+key+'">'+esc(label)+'</label><select id="f_'+key+'" name="'+key+'" '+(req?'required':'')+'>'+arg.map(opt=>'<option '+(String(val).toLowerCase()===opt.toLowerCase()?'selected':'')+'>'+esc(opt)+'</option>').join('')+'</select></div>'}let inputType=['text','date','time','number','email'].includes(kind)?kind:'text';if(kind==='textarea')return '<div class="field"><label for="f_'+key+'">'+esc(label)+'</label><textarea id="f_'+key+'" name="'+key+'" placeholder="'+esc(arg)+'" '+(req?'required':'')+'>'+esc(val)+'</textarea></div>';return '<div class="field"><label for="f_'+key+'">'+esc(label)+'</label><input id="f_'+key+'" name="'+key+'" type="'+inputType+'" '+(kind==='number'?'min="0" max="'+(key==='points'?'4':'1000')+'" step="'+(key==='points'?'.01':'1')+'"':'')+' value="'+esc(val|| (key==='date'&&type==='task'?defaults.date||'': ''))+'" placeholder="'+esc(arg)+'" '+(req?'required':'')+'></div>'}).join('');$('modalFields').querySelectorAll('input[name="course"]').forEach(input=>{const listId='semester-course-options';let list=document.getElementById(listId);if(!list){list=document.createElement('datalist');list.id=listId;list.innerHTML=FIRST_SEMESTER_SUBJECTS.map(s=>'<option value="'+esc(s.course)+'">').join('');document.body.append(list)}input.setAttribute('list',listId)});$('modalWrap').classList.add('open');setTimeout(()=> $('modalFields').querySelector('input,select,textarea')?.focus(),30)}
 function closeModal(){$('modalWrap').classList.remove('open');editing=null;modalType=''}
 $('modalClose').onclick=closeModal;$('modalCancel').onclick=closeModal;$('modalWrap').addEventListener('click',e=>{if(e.target===$('modalWrap'))closeModal()});document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal();if((e.ctrlKey||e.metaKey)&&e.key.toLowerCase()==='k'){e.preventDefault();$('taskSearch').focus()}});
-$('itemForm').addEventListener('submit',e=>{e.preventDefault();const obj=Object.fromEntries(new FormData(e.currentTarget));const type=modalType;for(const k of ['credits','points'])if(obj[k]!==undefined)obj[k]=Number(obj[k]);if(type==='task'){if(!obj.title.trim()||!obj.date){toast('Add a title and due date.','error');return}obj.completed=editing?(data.tasks.find(x=>x.id===editing)?.completed||false):false;obj.createdAt=editing?(data.tasks.find(x=>x.id===editing)?.createdAt||new Date().toISOString()):new Date().toISOString();}const collection={task:'tasks',class:'classes',grade:'grades',faculty:'faculty',note:'notes'}[type];if(editing){const i=data[collection].findIndex(x=>x.id===editing);if(i>=0)data[collection][i]={...data[collection][i],...obj,updatedAt:new Date().toISOString()}}else data[collection].push({id:uid(),...obj,createdAt:new Date().toISOString()});closeModal();save();toast(type==='task'?'Task saved.': 'Saved successfully.');if(type==='task')switchPage('tasks')});
+$('itemForm').addEventListener('submit',e=>{e.preventDefault();const obj=Object.fromEntries(new FormData(e.currentTarget));const type=modalType;for(const k of ['credits','points'])if(obj[k]!==undefined)obj[k]=obj[k]===''?'':Number(obj[k]);if(type==='task'){if(!obj.title.trim()||!obj.date){toast('Add a title and due date.','error');return}obj.completed=editing?(data.tasks.find(x=>x.id===editing)?.completed||false):false;obj.createdAt=editing?(data.tasks.find(x=>x.id===editing)?.createdAt||new Date().toISOString()):new Date().toISOString();}const collection={task:'tasks',class:'classes',grade:'grades',faculty:'faculty',note:'notes'}[type];if(editing){const i=data[collection].findIndex(x=>x.id===editing);if(i>=0)data[collection][i]={...data[collection][i],...obj,updatedAt:new Date().toISOString()}}else data[collection].push({id:uid(),...obj,createdAt:new Date().toISOString()});closeModal();save();toast(type==='task'?'Task saved.': 'Saved successfully.');if(type==='task')switchPage('tasks')});
 function taskStatus(t){if(t.completed)return'done';if(t.date<today())return'overdue';if(t.date===today())return'today';return'open'}
 function taskCard(t){const status=taskStatus(t);return '<div class="task '+(t.completed?'completed':'')+'"><input class="check" type="checkbox" data-complete="'+esc(t.id)+'" '+(t.completed?'checked':'')+' aria-label="Mark '+esc(t.title)+' complete"><div class="task-main"><div class="task-title">'+esc(t.title)+'</div><div class="task-meta"><span>◷ '+esc(t.date)+(t.time?' · '+esc(t.time):'')+'</span><span class="tag '+esc((t.priority||'medium').toLowerCase())+'">'+esc(t.priority||'Medium')+'</span><span class="tag">'+esc(t.category||'Other')+'</span>'+(t.course?'<span>'+esc(t.course)+'</span>':'')+(status==='overdue'?'<span style="color:var(--red)">Overdue</span>':'')+'</div>'+(t.description?'<div class="sub">'+esc(t.description)+'</div>':'')+'</div><div class="task-actions"><button class="mini" data-edit-task="'+esc(t.id)+'" aria-label="Edit task">✎</button><button class="mini" data-delete-task="'+esc(t.id)+'" aria-label="Delete task">✕</button></div></div>'}
 function renderTaskInto(el,items,empty){el.innerHTML=items.length?items.map(taskCard).join(''):'<div class="empty"><div class="big">✧</div>'+empty+'</div>'}
+
+function assignedWorkspaceTaskCard(task){
+ const workspace=workspaces.find(item=>item.id===task.workspace_id);
+ const workspaceName=workspace?.name||'Shared workspace';
+ const source=task.project_id?'Project task':'Workspace task';
+ return '<div class="task '+(task.completed?'completed':'')+'"><input class="check" type="checkbox" data-assigned-workspace-task="'+esc(task.id)+'" '+(task.completed?'checked':'')+' aria-label="Mark '+esc(task.title)+' complete"><div class="task-main"><div class="task-title">'+esc(task.title)+'</div><div class="task-meta"><span>◷ '+esc(task.due_date)+'</span><span class="tag">'+esc(source)+'</span><span class="tag">'+esc(workspaceName)+'</span></div>'+(task.description?'<div class="sub">'+esc(task.description)+'</div>':'')+'</div></div>';
+}
+let assignedWorkspaceTaskRequest=0;
+async function renderAssignedWorkspaceTasks(){
+ const list=$('assignedWorkspaceTasksList'),dashboard=$('dashAssignedWorkspaceTasks');
+ if(!list&&!dashboard)return;
+ const request=++assignedWorkspaceTaskRequest;
+ if(!supa||!user||!accessGranted){
+  const message=!user?'Sign in to see tasks classmates assign to you.':'Your account needs approved access to view shared workspace tasks.';
+  if(list)list.innerHTML='<div class="empty">'+esc(message)+'</div>';
+  if(dashboard)dashboard.innerHTML='<div class="empty">'+esc(message)+'</div>';
+  return;
+ }
+ if(list)list.innerHTML='<div class="empty">Loading assigned workspace tasks…</div>';
+ if(dashboard)dashboard.innerHTML='<div class="empty">Loading…</div>';
+ try{
+  const {data:rows,error}=await supa.from('uniplanner_shared_tasks')
+   .select('id,workspace_id,project_id,title,description,due_date,completed,created_by,assigned_to')
+   .eq('assigned_to',user.id)
+   .order('completed',{ascending:true})
+   .order('due_date',{ascending:true})
+   .limit(150);
+  if(error)throw error;
+  if(request!==assignedWorkspaceTaskRequest)return;
+  const tasks=rows||[];
+  const active=tasks.filter(task=>!task.completed);
+  const completed=tasks.filter(task=>task.completed);
+  if(list){
+   list.innerHTML=(active.length?active.map(assignedWorkspaceTaskCard).join(''):'<div class="empty">No open workspace tasks are assigned to you.</div>')+
+    (completed.length?'<details class="assigned-workspace-completed"><summary>Completed workspace tasks ('+completed.length+')</summary><div class="task-list" style="margin-top:10px">'+completed.map(assignedWorkspaceTaskCard).join('')+'</div></details>':'');
+  }
+  if(dashboard){
+   const preview=active.slice(0,4);
+   dashboard.innerHTML=preview.length?preview.map(assignedWorkspaceTaskCard).join(''):'<div class="empty">No open workspace tasks assigned to you.</div>';
+   if(active.length>4)dashboard.insertAdjacentHTML('beforeend','<button type="button" class="btn" data-open-assigned-workspace-tasks>View all '+active.length+' assigned tasks →</button>');
+   dashboard.querySelector('[data-open-assigned-workspace-tasks]')?.addEventListener('click',()=>switchPage('tasks'));
+  }
+  document.querySelectorAll('[data-assigned-workspace-task]').forEach(checkbox=>{
+   checkbox.onchange=async()=>{
+    const task=tasks.find(item=>item.id===checkbox.dataset.assignedWorkspaceTask);
+    if(!task)return;
+    const next=checkbox.checked;
+    checkbox.disabled=true;
+    try{
+     const {error}=await supa.from('uniplanner_shared_tasks')
+      .update({completed:next,updated_at:new Date().toISOString()})
+      .eq('id',task.id)
+      .eq('assigned_to',user.id)
+      .eq('workspace_id',task.workspace_id);
+     if(error)throw error;
+     task.completed=next;
+     toast(next?'Shared task completed.':'Shared task reopened.');
+     await renderAssignedWorkspaceTasks();
+     if(activeWorkspaceId===task.workspace_id)await loadWorkspaceTasks();
+    }catch(error){
+     checkbox.checked=!next;
+     checkbox.disabled=false;
+     toast('Could not update shared task: '+(error.message||'Unknown error'),'error');
+    }
+   };
+  });
+ }catch(error){
+  if(request!==assignedWorkspaceTaskRequest)return;
+  const message='Could not load assigned workspace tasks: '+(error.message||'Unknown error');
+  if(list)list.innerHTML='<div class="empty">'+esc(message)+'</div>';
+  if(dashboard)dashboard.innerHTML='<div class="empty">'+esc(message)+'</div>';
+ }
+}
+
 function renderTasks(){const sortMode=$('taskSort')?.value||'date';const priorityRank=t=>({High:0,Medium:1,Low:2}[t.priority]??3);const compare=(a,b)=>{if(a.completed!==b.completed)return Number(a.completed)-Number(b.completed);if(sortMode==='priority')return priorityRank(a)-priorityRank(b)||a.date.localeCompare(b.date)||(a.time||'').localeCompare(b.time||'');if(sortMode==='course')return (a.course||'').localeCompare(b.course||'')||a.date.localeCompare(b.date);return a.date.localeCompare(b.date)||(a.time||'').localeCompare(b.time||'')||priorityRank(a)-priorityRank(b)};const sorted=[...data.tasks].sort(compare);renderTaskInto($('dashTasks'),[...data.tasks].sort((a,b)=>Number(a.completed)-Number(b.completed)||a.date.localeCompare(b.date)||(a.time||'').localeCompare(b.time||'')).filter(t=>!t.completed).slice(0,5),'You are all caught up. Add a task when you are ready.');const q=($('taskSearch').value||'').trim().toLowerCase(),f=$('taskFilter').value,c=$('categoryFilter').value;const horizon=localDate(new Date(Date.now()+7*86400000));const active=data.tasks.filter(t=>!t.completed);const dueToday=active.filter(t=>t.date===today()).length,overdue=active.filter(t=>t.date<today()).length,nextSeven=active.filter(t=>t.date>=today()&&t.date<=horizon).length;const summaries=[['Open',active.length,'open'],['Overdue',overdue,'overdue'],['Due today',dueToday,'today'],['Next 7 days',nextSeven,'next7']];$('planningSummary').innerHTML=summaries.map(([label,count,filter])=>'<button type="button" class="planning-stat '+(f===filter?'selected':'')+'" data-task-shortcut="'+filter+'" aria-pressed="'+(f===filter)+'"><span>'+label+'</span><strong>'+count+'</strong></button>').join('');const list=sorted.filter(t=>(!q||[t.title,t.course,t.description,t.category].join(' ').toLowerCase().includes(q))&&(f==='all'||(f==='open'?!t.completed:f==='done'?t.completed:f==='priority-high'?!t.completed&&t.priority==='High':f==='next7'?!t.completed&&t.date>=today()&&t.date<=horizon:taskStatus(t)===f))&&(c==='all'||t.category===c));renderTaskInto($('allTasks'),list,'No tasks match these filters.');$('planningSummary').querySelectorAll('[data-task-shortcut]').forEach(b=>b.onclick=()=>{$('taskFilter').value=b.dataset.taskShortcut;switchPage('tasks');renderTasks()});renderTaskInto($('selectedDayTasks'),sorted.filter(t=>t.date===selectedDate),'Nothing scheduled for this day.');$('selectedDateTitle').textContent=new Date(selectedDate+'T12:00:00').toLocaleDateString(undefined,{weekday:'long',month:'long',day:'numeric',year:'numeric'});document.querySelectorAll('[data-complete]').forEach(el=>el.onchange=()=>{const t=data.tasks.find(x=>x.id===el.dataset.complete);if(t){t.completed=el.checked;t.completedAt=t.completed?new Date().toISOString():null;if(t.completed)data.reminded=(data.reminded||[]).filter(id=>id!==t.id);save();toast(t.completed?'Task completed. Nice work.':'Task reopened.')}});document.querySelectorAll('[data-edit-task]').forEach(el=>el.onclick=()=>openModal('task',el.dataset.editTask));document.querySelectorAll('[data-delete-task]').forEach(el=>el.onclick=()=>{const t=data.tasks.find(x=>x.id===el.dataset.deleteTask);if(t&&confirm('Delete “'+t.title+'”? This cannot be undone.')){data.tasks=data.tasks.filter(x=>x.id!==t.id);data.reminded=(data.reminded||[]).filter(id=>id!==t.id);save();toast('Task deleted.')}})}
 function renderAttentionPlan(){
  const box=$('todayAttention'),summary=$('attentionSummary');if(!box||!summary)return;
@@ -485,44 +599,1036 @@ function calendarHTML(target,small=false){const y=month.getFullYear(),m=month.ge
 function renderCalendars(){const label=month.toLocaleDateString(undefined,{month:'long',year:'numeric'});$('monthHeading').textContent=label;$('dashMonthLabel').textContent=label;$('fullCalendar').innerHTML=calendarHTML($('fullCalendar'));$('miniCalendar').innerHTML=calendarHTML($('miniCalendar'),true);document.querySelectorAll('[data-day]').forEach(el=>el.onclick=()=>{const fromMini=!!el.closest('#miniCalendar');selectedDate=el.dataset.day;renderCalendars();renderTasks();if(fromMini)switchPage('calendar')})}
 $('prevMonth').onclick=()=>{month=new Date(month.getFullYear(),month.getMonth()-1,1);renderCalendars()};$('nextMonth').onclick=()=>{month=new Date(month.getFullYear(),month.getMonth()+1,1);renderCalendars()};$('todayBtn').onclick=()=>{month=new Date(new Date().getFullYear(),new Date().getMonth(),1);selectedDate=today();renderCalendars();renderTasks()};$('addSelectedDate').onclick=()=>openModal('task',null,{date:selectedDate});$('taskSearch').addEventListener('input',renderTasks);$('taskFilter').onchange=renderTasks;$('categoryFilter').onchange=renderTasks;$('taskSort').onchange=renderTasks;
 function renderClasses(){const days=['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'];const a=[...data.classes].sort((x,y)=>days.indexOf(x.day)-days.indexOf(y.day)||(x.start||'').localeCompare(y.start||''));$('timetableList').innerHTML=a.length?a.map(c=>'<div class="task"><div class="task-main"><div class="task-title">'+esc(c.course)+'</div><div class="task-meta"><span>'+esc(c.day)+'</span><span>'+esc(c.start)+'–'+esc(c.end)+'</span>'+(c.room?'<span>⌖ '+esc(c.room)+'</span>':'')+(c.teacher?'<span>'+esc(c.teacher)+'</span>':'')+'</div></div><button class="mini" data-edit-class="'+esc(c.id)+'">✎</button><button class="mini" data-delete-class="'+esc(c.id)+'">✕</button></div>').join(''):'<div class="empty">Add your first class to build your weekly timetable.</div>';document.querySelectorAll('[data-edit-class]').forEach(b=>b.onclick=()=>openModal('class',b.dataset.editClass));document.querySelectorAll('[data-delete-class]').forEach(b=>b.onclick=()=>{if(confirm('Delete this class?')){data.classes=data.classes.filter(c=>c.id!==b.dataset.deleteClass);save()}})}
-function renderGrades(){const a=data.grades;$('gradeCount').textContent=a.length;$('creditCount').textContent=a.reduce((s,g)=>s+(Number(g.credits)||0),0);const credits=a.reduce((s,g)=>s+(Number(g.credits)||0),0),points=a.reduce((s,g)=>s+(Number(g.points)||0)*(Number(g.credits)||0),0);$('gpaValue').textContent=credits?(points/credits).toFixed(2):'—';$('gradesList').innerHTML=a.length?a.map(g=>'<div class="task"><div class="task-main"><div class="task-title">'+esc(g.course)+'</div><div class="task-meta"><span>'+esc(g.credits)+' credit hours</span><span>'+esc(g.points)+' / 4.00 points</span>'+(g.letter?'<span>'+esc(g.letter)+'</span>':'')+'</div></div><button class="mini" data-edit-grade="'+esc(g.id)+'">✎</button><button class="mini" data-delete-grade="'+esc(g.id)+'">✕</button></div>').join(''):'<div class="empty">Add courses and the grade points from your university&#39;s scale.</div>';document.querySelectorAll('[data-edit-grade]').forEach(b=>b.onclick=()=>openModal('grade',b.dataset.editGrade));document.querySelectorAll('[data-delete-grade]').forEach(b=>b.onclick=()=>{if(confirm('Delete this course?')){data.grades=data.grades.filter(g=>g.id!==b.dataset.deleteGrade);save()}})}
-async function loadWorkspaces(){if(!supa||!user){workspaces=[];activeWorkspaceId=null;$('workspaceList').innerHTML='<div class="empty">Sign in under Settings & sync to use study groups.</div>';$('workspaceContent').innerHTML='<div class="empty">Connect Supabase and sign in to create shared spaces.</div>';$('workspaceHeading').textContent='Shared tasks';$('workspaceSub').textContent='Choose a workspace to get started.';return}try{const {data:r,error}=await supa.from('uniplanner_workspaces').select('id,name,created_at').order('created_at',{ascending:false});if(error)throw error;workspaces=r||[];if(!workspaces.some(w=>w.id===activeWorkspaceId))activeWorkspaceId=workspaces[0]?.id||null;renderWorkspaceList();await loadWorkspaceTasks()}catch(e){console.error(e);$('workspaceList').innerHTML='<div class="empty">Could not load workspaces. Check that supabase-schema.sql has been run.</div>';toast('Workspace load failed: '+(e.message||''),'error')}}
+function renderGrades(){const a=data.grades;$('gradeCount').textContent=a.length;const credits=a.reduce((s,g)=>s+(Number(g.credits)||0),0),graded=a.filter(g=>g.points!==''&&g.points!==null&&g.points!==undefined&&Number.isFinite(Number(g.points))),gradedCredits=graded.reduce((s,g)=>s+(Number(g.credits)||0),0),points=graded.reduce((s,g)=>s+(Number(g.points)||0)*(Number(g.credits)||0),0);$('creditCount').textContent=credits;$('gpaValue').textContent=gradedCredits?(points/gradedCredits).toFixed(2):'—';$('gradesList').innerHTML=a.length?a.map(g=>'<div class="task"><div class="task-main"><div class="task-title">'+esc(g.course)+'</div><div class="task-meta"><span>'+esc(g.credits)+' credit hours</span><span>'+(g.points!==''&&g.points!==null&&g.points!==undefined?esc(g.points)+' / 4.00 points':'Not graded yet')+'</span>'+(g.letter?'<span>'+esc(g.letter)+'</span>':'')+'</div></div><button class="mini" data-edit-grade="'+esc(g.id)+'">✎</button><button class="mini" data-delete-grade="'+esc(g.id)+'">✕</button></div>').join(''):'<div class="empty">Add courses and the grade points from your university&#39;s scale.</div>';$('gradesList').insertAdjacentHTML('beforeend','<div class="sub" style="padding:10px 2px">First semester: '+FIRST_SEMESTER_SUBJECTS.length+' subjects · '+FIRST_SEMESTER_SUBJECTS.reduce((n,s)=>n+s.credits,0)+' total credit hours. GPA uses only courses with grade points entered.</div>');document.querySelectorAll('[data-edit-grade]').forEach(b=>b.onclick=()=>openModal('grade',b.dataset.editGrade));document.querySelectorAll('[data-delete-grade]').forEach(b=>b.onclick=()=>{if(confirm('Delete this course?')){data.grades=data.grades.filter(g=>g.id!==b.dataset.deleteGrade);save()}})}
+async function loadWorkspaces(){if(!supa||!user){workspaces=[];activeWorkspaceId=null;$('workspaceList').innerHTML='<div class="empty">Sign in under Settings & sync to use study groups.</div>';$('workspaceContent').innerHTML='<div class="empty">Connect Supabase and sign in to create shared spaces.</div>';$('workspaceHeading').textContent='Shared tasks';$('workspaceSub').textContent='Choose a workspace to get started.';return}try{const {data:r,error}=await supa.from('uniplanner_workspaces').select('id,name,created_at').order('created_at',{ascending:false});if(error)throw error;workspaces=r||[];if(!workspaces.some(w=>w.id===activeWorkspaceId))activeWorkspaceId=workspaces[0]?.id||null;renderWorkspaceList();await loadWorkspaceInvitations();await loadDiscoverableWorkspaces();await loadWorkspaceTasks()}catch(e){console.error(e);$('workspaceList').innerHTML='<div class="empty">Could not load workspaces. Check that supabase-schema.sql has been run.</div>';toast('Workspace load failed: '+(e.message||''),'error')}}
+async function loadWorkspaceInvitations(){
+ const panel=$('workspaceInvitationsPanel'),box=$('workspaceInvitationsList');
+ if(!panel||!box||!supa||!user)return;
+ try{
+  const {data:rows,error}=await supa.from('uniplanner_workspace_invitations')
+   .select('id,workspace_id,invited_email,invited_user_id,expires_at')
+   .eq('status','pending').order('created_at',{ascending:false}).limit(50);
+  if(error)throw error;
+  const mine=(rows||[]).filter(r=>r.invited_email?.toLowerCase()===user.email?.toLowerCase()||r.invited_user_id===user.id);
+  panel.style.display=mine.length?'block':'none';
+  box.innerHTML=mine.map(r=>'<div class="task"><div class="task-main"><div class="task-title">Workspace invitation</div><div class="task-meta">Expires '+esc(new Date(r.expires_at).toLocaleDateString())+'</div></div><button class="btn primary" data-invite-accept="'+esc(r.id)+'">Accept</button><button class="btn" data-invite-decline="'+esc(r.id)+'">Decline</button></div>').join('');
+  box.querySelectorAll('[data-invite-accept],[data-invite-decline]').forEach(b=>b.onclick=async()=>{
+   const decision=b.hasAttribute('data-invite-accept')?'accept':'decline';
+   const id=b.getAttribute('data-invite-accept')||b.getAttribute('data-invite-decline');
+   const {error}=await supa.rpc('uniplanner_respond_workspace_invitation',{p_invitation_id:id,p_decision:decision});
+   if(error){toast('Invitation response failed: '+error.message,'error');return}
+   toast(decision==='accept'?'You joined the workspace.':'Invitation declined.');
+   await loadWorkspaceInvitations();await loadWorkspaces();
+  });
+ }catch(e){panel.style.display='block';box.innerHTML='<div class="empty">Could not load invitations: '+esc(e.message)+'</div>'}
+}
+async function loadDiscoverableWorkspaces(){
+ const box=$('workspaceDiscoveryList'),search=$('workspaceDiscoverySearch'),button=$('workspaceDiscoverySearchBtn');
+ if(!box||!supa||!user)return;
+ if(button)button.onclick=()=>loadDiscoverableWorkspaces();
+ if(search&&!search.dataset.bound){search.dataset.bound='1';search.addEventListener('keydown',e=>{if(e.key==='Enter')loadDiscoverableWorkspaces()})}
+ box.innerHTML='<div class="empty">Looking for study workspaces…</div>';
+ try{
+  const {data,error}=await supa.rpc('uniplanner_discover_workspaces',{p_search:search?.value.trim()||null});
+  if(error)throw error;
+  const rows=data||[];
+  box.innerHTML=rows.length?rows.map(w=>{
+   const pending=w.request_status==='pending';
+   const label=pending?'Cancel request':(w.request_status==='rejected'||w.request_status==='cancelled'?'Request again':'Request to join');
+   const action=pending?'data-discover-cancel':'data-discover-request';
+   return '<div class="task"><div class="task-main"><div class="task-title">'+esc(w.workspace_name)+'</div><div class="task-meta"><span class="tag">'+esc(w.workspace_type==='course'?'Course workspace':'Study group')+'</span><span>'+Number(w.member_count||0)+' members</span></div></div><button class="btn '+(pending?'':'primary')+'" '+action+'="'+esc(w.workspace_id)+'">'+label+'</button></div>';
+  }).join(''):'<div class="empty">No discoverable workspaces found. Try another name, or ask a classmate to make their workspace discoverable.</div>';
+  box.querySelectorAll('[data-discover-request],[data-discover-cancel]').forEach(b=>b.onclick=async()=>{
+   const cancel=b.hasAttribute('data-discover-cancel');
+   const id=b.getAttribute('data-discover-cancel')||b.getAttribute('data-discover-request');
+   b.disabled=true;
+   const {error}=await supa.rpc(cancel?'uniplanner_cancel_workspace_join_request':'uniplanner_request_workspace_join',
+    cancel?{target_workspace:id}:{target_workspace:id,request_message:''});
+   if(error){toast((cancel?'Could not cancel request: ':'Could not request to join: ')+error.message,'error');b.disabled=false;return}
+   toast(cancel?'Join request cancelled.':'Join request sent. The workspace owner can review it.');
+   await loadDiscoverableWorkspaces();
+  });
+ }catch(e){box.innerHTML='<div class="empty">Could not discover workspaces: '+esc(e.message)+'</div>'}
+}
 function renderWorkspaceList(){$('workspaceList').innerHTML=workspaces.length?workspaces.map(w=>'<button class="task" data-workspace="'+esc(w.id)+'" style="text-align:left;width:100%;cursor:pointer;border-color:'+(w.id===activeWorkspaceId?'var(--blue)':'var(--line)')+'"><span style="font-size:18px">♧</span><span class="task-main"><span class="task-title">'+esc(w.name)+'</span><span class="task-meta">Shared group workspace</span></span>'+(w.id===activeWorkspaceId?'<span class="tag">Selected</span>':'→')+'</button>').join(''):'<div class="empty">No workspaces yet. Create one for your group.</div>';document.querySelectorAll('[data-workspace]').forEach(b=>b.onclick=()=>{activeWorkspaceId=b.dataset.workspace;renderWorkspaceList();loadWorkspaceTasks()})}
-async function loadWorkspaceTasks(){const requestId=++workspaceLoadSeq;const w=workspaces.find(x=>x.id===activeWorkspaceId);if(!supa||!user||!w){$('workspaceHeading').textContent='Shared tasks';$('workspaceSub').textContent='Choose a workspace to get started.';$('workspaceContent').innerHTML='<div class="empty">Select a workspace, or create one on the left.</div>';return} $('workspaceHeading').textContent=w.name;$('workspaceSub').textContent='Shared with your group · changes sync through Supabase';$('workspaceContent').innerHTML='<div class="empty">Loading shared tasks…</div>';try{const [tasksRes,membersRes]=await Promise.all([supa.from('uniplanner_shared_tasks').select('id,title,description,due_date,category,priority,completed,created_by,assigned_to').eq('workspace_id',w.id).order('due_date',{ascending:true}),supa.from('uniplanner_workspace_members').select('user_id,role').eq('workspace_id',w.id)]);if(tasksRes.error)throw tasksRes.error;if(membersRes.error)throw membersRes.error;if(requestId!==workspaceLoadSeq||activeWorkspaceId!==w.id)return;const tasks=tasksRes.data||[],members=membersRes.data||[],profiles=await loadWorkspaceProfiles(members.map(m=>m.user_id));if(requestId!==workspaceLoadSeq||activeWorkspaceId!==w.id)return;const memberLabel=id=>{if(!id)return'Unassigned';const label=profiles.get(id)||'Member';return id===user.id?label+' (you)':label};const completedCount=tasks.filter(t=>t.completed).length,overdueCount=tasks.filter(t=>!t.completed&&t.due_date<today()).length;$('workspaceSub').textContent=members.length+' member'+(members.length===1?'':'s')+' · shared with your group';$('workspaceContent').innerHTML='<div class="group-summary"><div class="stat"><div class="stat-head">Total tasks</div><div class="stat-num">'+tasks.length+'</div></div><div class="stat"><div class="stat-head">Completed</div><div class="stat-num">'+completedCount+'</div></div><div class="stat"><div class="stat-head">Overdue</div><div class="stat-num" style="color:var(--red)">'+overdueCount+'</div></div></div><div class="field"><label for="sharedTitle">New shared task</label><input id="sharedTitle" maxlength="180" placeholder="What does the group need to do?"></div><div class="formgrid"><div class="field"><label for="sharedDate">Due date</label><input id="sharedDate" type="date" value="'+today()+'"></div><div class="field"><label for="sharedPriority">Priority</label><select id="sharedPriority"><option>High</option><option selected>Medium</option><option>Low</option></select></div></div><div class="formgrid"><div class="field"><label for="sharedCategory">Category</label><select id="sharedCategory"><option>Assignment</option><option>Quiz</option><option>Group</option><option>Presentation</option><option>Exam</option><option>Other</option></select></div><div class="field"><label for="sharedDescription">Details (optional)</label><input id="sharedDescription" placeholder="Instructions or context"></div></div><div class="field"><label for="sharedAssignee">Assign to member (optional)</label><select id="sharedAssignee"><option value="">Unassigned</option>'+members.map(m=>'<option value="'+esc(m.user_id)+'">'+esc((profiles.get(m.user_id)||'Member')+(m.user_id===user.id?' (you)':''))+'</option>').join('')+'</select></div><button class="btn primary" id="createSharedTaskBtn">＋ Add shared task</button><hr class="divider"><div class="field"><label for="inviteEmail">Invite a classmate by account email</label><div class="row"><input id="inviteEmail" type="email" placeholder="classmate@example.com" style="flex:1;min-width:120px"><button class="btn" id="inviteMemberBtn">Invite</button></div><div class="sub">They must have created a UniPlanner account in the same Supabase project.</div></div><hr class="divider"><h3 style="margin-bottom:12px">Group task list</h3><div class="task-list" id="sharedTaskList">'+(tasks.length?tasks.map(t=>'<div class="task"><input class="check" type="checkbox" data-shared-complete="'+esc(t.id)+'" '+(t.completed?'checked':'')+' aria-label="Complete shared task"><div class="task-main"><div class="task-title '+(t.completed?'muted':'')+'">'+esc(t.title)+'</div><div class="task-meta"><span>◷ '+esc(t.due_date)+'</span><span class="tag '+esc((t.priority||'Medium').toLowerCase())+'">'+esc(t.priority)+'</span><span class="tag">'+esc(t.category)+'</span></div>'+(t.description?'<div class="sub">'+esc(t.description)+'</div>':'')+'<div class="task-meta"><span class="tag">Assigned: '+esc(memberLabel(t.assigned_to))+'</span></div></div><button class="mini" data-delete-shared="'+esc(t.id)+'" aria-label="Delete shared task">✕</button></div>').join(''):'<div class="empty">No shared tasks yet. Add the first one above.</div>')+'</div><hr class="divider"><h3>Team collaboration</h3><div class="sub">Shared notes, task discussions, and group chat are visible to workspace members.</div><div class="panel" style="margin-top:12px"><h3>Shared study notes</h3><div class="field"><label for="teamNoteTitle">Note title</label><input id="teamNoteTitle" maxlength="120" placeholder="e.g. Week 4 revision notes"></div><div class="field"><label for="teamNoteBody">Note</label><textarea id="teamNoteBody" rows="3" maxlength="10000" placeholder="Add useful notes for the whole group"></textarea></div><button class="btn" id="saveTeamNote">＋ Share note</button><div class="task-list" id="teamNotesList"></div></div><div class="panel" style="margin-top:12px"><h3>Task discussion</h3><div class="field"><label for="discussionTask">Choose a task</label><select id="discussionTask"></select></div><div class="task-list" id="taskCommentsList"></div><div class="field"><label for="taskCommentText">Comment</label><textarea id="taskCommentText" rows="2" maxlength="3000" placeholder="Ask a question or share progress"></textarea></div><button class="btn" id="postTaskComment">Post comment</button></div><div class="panel" style="margin-top:12px"><h3>Group chat</h3><div class="task-list" id="groupChatList" style="max-height:320px;overflow:auto"></div><div class="field"><label for="groupChatText">Message your group</label><textarea id="groupChatText" rows="2" maxlength="3000" placeholder="Share an update with everyone"></textarea></div><button class="btn primary" id="sendGroupChat">Send message</button></div><hr class="divider"><div class="small-label">Workspace content is shared with members only.</div>';$('createSharedTaskBtn').onclick=async()=>{const title=$('sharedTitle').value.trim(),due_date=$('sharedDate').value;if(!title||!due_date){toast('Add a shared task title and due date.','error');return}try{const {error}=await supa.from('uniplanner_shared_tasks').insert({workspace_id:w.id,created_by:user.id,title,due_date,priority:$('sharedPriority').value,category:$('sharedCategory').value,description:$('sharedDescription').value.trim(),assigned_to:$('sharedAssignee').value||null});if(error)throw error;toast('Shared task added.');await loadWorkspaceTasks()}catch(e){toast('Could not add shared task: '+e.message,'error')}};$('inviteMemberBtn').onclick=async()=>{const email=$('inviteEmail').value.trim();if(!email){toast('Enter the classmate’s account email.','error');return}try{const {error}=await supa.rpc('uniplanner_invite_member',{target_workspace:w.id,invite_email:email});if(error)throw error;toast('Classmate added to the workspace.');await loadWorkspaceTasks()}catch(e){toast('Invite failed: '+e.message,'error')}};document.querySelectorAll('[data-shared-complete]').forEach(b=>b.onchange=async()=>{try{const {error}=await supa.from('uniplanner_shared_tasks').update({completed:b.checked,updated_at:new Date().toISOString()}).eq('id',b.dataset.sharedComplete).eq('workspace_id',w.id);if(error)throw error;await loadWorkspaceTasks()}catch(e){toast('Could not update shared task: '+e.message,'error');await loadWorkspaceTasks()}});document.querySelectorAll('[data-delete-shared]').forEach(b=>b.onclick=async()=>{if(!confirm('Delete this shared task for the whole group?'))return;try{const {error}=await supa.from('uniplanner_shared_tasks').delete().eq('id',b.dataset.deleteShared).eq('workspace_id',w.id);if(error)throw error;toast('Shared task deleted.');await loadWorkspaceTasks()}catch(e){toast('Could not delete shared task: '+e.message,'error')}});await renderWorkspaceCollab(w,tasks,requestId)}catch(e){console.error('Study Groups load failed:',e);if(requestId!==workspaceLoadSeq)return;const content=$('workspaceContent');if(content)content.innerHTML='<div class="empty">Could not load shared tasks. Check your workspace access and try again.</div>';toast('Could not load group tasks: '+(e&&e.message?e.message:'Unknown error'),'error')}}
+async function loadWorkspaceTasks(){const requestId=++workspaceLoadSeq;const w=workspaces.find(x=>x.id===activeWorkspaceId);if(!supa||!user||!w){$('workspaceHeading').textContent='Shared tasks';$('workspaceSub').textContent='Choose a workspace to get started.';$('workspaceContent').innerHTML='<div class="empty">Select a workspace, or create one on the left.</div>';return} $('workspaceHeading').textContent=w.name;$('workspaceSub').textContent='Shared with your group · changes sync through Supabase';$('workspaceContent').innerHTML='<div class="empty">Loading shared tasks…</div>';try{const [tasksRes,membersRes]=await Promise.all([supa.from('uniplanner_shared_tasks').select('id,title,description,due_date,category,priority,completed,created_by,assigned_to').eq('workspace_id',w.id).order('due_date',{ascending:true}),supa.from('uniplanner_workspace_members').select('user_id,role').eq('workspace_id',w.id)]);if(tasksRes.error)throw tasksRes.error;if(membersRes.error)throw membersRes.error;if(requestId!==workspaceLoadSeq||activeWorkspaceId!==w.id)return;const tasks=tasksRes.data||[],members=membersRes.data||[],profiles=await loadWorkspaceProfiles(members.map(m=>m.user_id));if(requestId!==workspaceLoadSeq||activeWorkspaceId!==w.id)return;const myRole=members.find(m=>m.user_id===user.id)?.role||'member';let isSiteAdmin=false;try{const adminCheck=await supa.rpc('uniplanner_is_admin');isSiteAdmin=!adminCheck.error&&adminCheck.data===true}catch(e){}if(requestId!==workspaceLoadSeq||activeWorkspaceId!==w.id)return;const memberLabel=id=>{if(!id)return'Unassigned';const label=profiles.get(id)||'Member';return id===user.id?label+' (you)':label};const completedCount=tasks.filter(t=>t.completed).length,overdueCount=tasks.filter(t=>!t.completed&&t.due_date<today()).length;$('workspaceSub').textContent=members.length+' member'+(members.length===1?'':'s')+' · shared with your group';$('workspaceContent').innerHTML='<div style="display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end;margin-bottom:14px">'+((myRole==='owner'||isSiteAdmin)?'<button class="btn" id="deleteWorkspaceBtn" style="border-color:var(--red);color:var(--red)">Delete workspace</button>':'')+'<button class="btn" id="leaveWorkspaceBtn">'+(myRole==='owner'?'Transfer ownership & leave':'Leave workspace')+'</button></div><div class="group-summary"><div class="stat"><div class="stat-head">Total tasks</div><div class="stat-num">'+tasks.length+'</div></div><div class="stat"><div class="stat-head">Completed</div><div class="stat-num">'+completedCount+'</div></div><div class="stat"><div class="stat-head">Overdue</div><div class="stat-num" style="color:var(--red)">'+overdueCount+'</div></div></div><div class="field"><label for="sharedTitle">New shared task</label><input id="sharedTitle" maxlength="180" placeholder="What does the group need to do?"></div><div class="formgrid"><div class="field"><label for="sharedDate">Due date</label><input id="sharedDate" type="date" value="'+today()+'"></div><div class="field"><label for="sharedPriority">Priority</label><select id="sharedPriority"><option>High</option><option selected>Medium</option><option>Low</option></select></div></div><div class="formgrid"><div class="field"><label for="sharedCategory">Category</label><select id="sharedCategory"><option>Assignment</option><option>Quiz</option><option>Group</option><option>Presentation</option><option>Exam</option><option>Other</option></select></div><div class="field"><label for="sharedDescription">Details (optional)</label><input id="sharedDescription" placeholder="Instructions or context"></div></div><div class="field"><label for="sharedAssignee">Assign to member (optional)</label><select id="sharedAssignee"><option value="">Unassigned</option>'+members.map(m=>'<option value="'+esc(m.user_id)+'">'+esc((profiles.get(m.user_id)||'Member')+(m.user_id===user.id?' (you)':''))+'</option>').join('')+'</select></div><button class="btn primary" id="createSharedTaskBtn">＋ Add shared task</button><hr class="divider"><div class="field"><label for="inviteEmail">Invite a classmate by account email</label><div class="row"><input id="inviteEmail" type="email" placeholder="classmate@example.com" style="flex:1;min-width:120px"><button class="btn" id="inviteMemberBtn">Invite</button></div><div class="sub">They must have created a UniPlanner account in the same Supabase project.</div></div><hr class="divider"><h3 style="margin-bottom:12px">Group task list</h3><div class="task-list" id="sharedTaskList">'+(tasks.length?tasks.map(t=>'<div class="task"><input class="check" type="checkbox" data-shared-complete="'+esc(t.id)+'" '+(t.completed?'checked':'')+' aria-label="Complete shared task"><div class="task-main"><div class="task-title '+(t.completed?'muted':'')+'">'+esc(t.title)+'</div><div class="task-meta"><span>◷ '+esc(t.due_date)+'</span><span class="tag '+esc((t.priority||'Medium').toLowerCase())+'">'+esc(t.priority)+'</span><span class="tag">'+esc(t.category)+'</span></div>'+(t.description?'<div class="sub">'+esc(t.description)+'</div>':'')+'<div class="task-meta"><span class="tag">Assigned: '+esc(memberLabel(t.assigned_to))+'</span></div></div><button class="mini" data-delete-shared="'+esc(t.id)+'" aria-label="Delete shared task">✕</button></div>').join(''):'<div class="empty">No shared tasks yet. Add the first one above.</div>')+'</div><hr class="divider"><h3>Team collaboration</h3><div class="sub">Shared notes, task discussions, and group chat are visible to workspace members.</div><div class="panel" style="margin-top:12px"><h3>Shared study notes</h3><div class="field"><label for="teamNoteTitle">Note title</label><input id="teamNoteTitle" maxlength="120" placeholder="e.g. Week 4 revision notes"></div><div class="field"><label for="teamNoteBody">Note</label><textarea id="teamNoteBody" rows="3" maxlength="10000" placeholder="Add useful notes for the whole group"></textarea></div><button class="btn" id="saveTeamNote">＋ Share note</button><div class="task-list" id="teamNotesList"></div></div><div class="panel" style="margin-top:12px"><h3>Task discussion</h3><div class="field"><label for="discussionTask">Choose a task</label><select id="discussionTask"></select></div><div class="task-list" id="taskCommentsList"></div><div class="field"><label for="taskCommentText">Comment</label><textarea id="taskCommentText" rows="2" maxlength="3000" placeholder="Ask a question or share progress"></textarea></div><button class="btn" id="postTaskComment">Post comment</button></div><div class="panel" style="margin-top:12px"><h3>Group chat</h3><div class="task-list" id="groupChatList" style="max-height:320px;overflow:auto"></div><div class="field"><label for="groupChatText">Message your group</label><textarea id="groupChatText" rows="2" maxlength="3000" placeholder="Share an update with everyone"></textarea></div><button class="btn primary" id="sendGroupChat">Send message</button></div><hr class="divider"><div class="small-label">Workspace content is shared with members only.</div>';const leaveBtn=$('leaveWorkspaceBtn');if(leaveBtn)leaveBtn.onclick=async()=>{if(myRole==='owner'&&members.length<2){toast('You are the only member. Delete the workspace or invite another member before leaving.','error');return}const msg=myRole==='owner'?'Leave this workspace? Ownership will transfer to the longest-standing remaining member. The workspace and shared content will remain.':'Leave this workspace? Your membership will be removed, but the workspace and shared content will remain.';if(!confirm(msg))return;leaveBtn.disabled=true;try{const {error}=await supa.rpc('uniplanner_leave_workspace',{target_workspace:w.id});if(error)throw error;activeWorkspaceId=null;toast('You left the workspace.');await loadWorkspaces()}catch(e){toast('Could not leave workspace: '+(e.message||'Unknown error'),'error');await loadWorkspaceTasks()}};const deleteBtn=$('deleteWorkspaceBtn');if(deleteBtn)deleteBtn.onclick=async()=>{if(!confirm('Permanently delete "'+w.name+'" for everyone? Shared tasks, notes, comments, and chat in this workspace will be deleted. Your personal planner data will not be affected. This cannot be undone.'))return;deleteBtn.disabled=true;try{const {error}=await supa.rpc('uniplanner_delete_workspace',{target_workspace:w.id});if(error)throw error;activeWorkspaceId=null;toast('Workspace deleted.');await loadWorkspaces()}catch(e){toast('Could not delete workspace: '+(e.message||'Unknown error'),'error');await loadWorkspaceTasks()}};$('createSharedTaskBtn').onclick=async()=>{const title=$('sharedTitle').value.trim(),due_date=$('sharedDate').value;if(!title||!due_date){toast('Add a shared task title and due date.','error');return}try{const {error}=await supa.from('uniplanner_shared_tasks').insert({workspace_id:w.id,created_by:user.id,title,due_date,priority:$('sharedPriority').value,category:$('sharedCategory').value,description:$('sharedDescription').value.trim(),assigned_to:$('sharedAssignee').value||null});if(error)throw error;toast('Shared task added.');await loadWorkspaceTasks()}catch(e){toast('Could not add shared task: '+e.message,'error')}};$('inviteMemberBtn').onclick=async()=>{const email=$('inviteEmail').value.trim();if(!email){toast('Enter the classmate’s account email.','error');return}try{const {error}=await supa.rpc('uniplanner_invite_member',{target_workspace:w.id,invite_email:email});if(error)throw error;toast('Invitation sent. They will join after accepting.');await loadWorkspaceTasks()}catch(e){toast('Invite failed: '+e.message,'error')}};document.querySelectorAll('[data-shared-complete]').forEach(b=>b.onchange=async()=>{try{const {error}=await supa.from('uniplanner_shared_tasks').update({completed:b.checked,updated_at:new Date().toISOString()}).eq('id',b.dataset.sharedComplete).eq('workspace_id',w.id);if(error)throw error;await loadWorkspaceTasks()}catch(e){toast('Could not update shared task: '+e.message,'error');await loadWorkspaceTasks()}});document.querySelectorAll('[data-delete-shared]').forEach(b=>b.onclick=async()=>{if(!confirm('Delete this shared task for the whole group?'))return;try{const {error}=await supa.from('uniplanner_shared_tasks').delete().eq('id',b.dataset.deleteShared).eq('workspace_id',w.id);if(error)throw error;toast('Shared task deleted.');await loadWorkspaceTasks()}catch(e){toast('Could not delete shared task: '+e.message,'error')}});await renderWorkspaceCollab(w,tasks,requestId)}catch(e){console.error('Study Groups load failed:',e);if(requestId!==workspaceLoadSeq)return;const content=$('workspaceContent');if(content)content.innerHTML='<div class="empty">Could not load shared tasks. Check your workspace access and try again.</div>';toast('Could not load group tasks: '+(e&&e.message?e.message:'Unknown error'),'error')}}
 $('createWorkspaceBtn').onclick=async()=>{if(!supa||!user){toast('Configure Supabase and sign in under Settings & sync first.','error');return}const name=$('workspaceName').value.trim();if(!name){toast('Enter a workspace name.','error');return}try{const {data:id,error}=await supa.rpc('uniplanner_create_workspace',{workspace_name:name});if(error)throw error;activeWorkspaceId=id;$('workspaceName').value='';await loadWorkspaces();toast('Workspace created. Invite your classmates by email.')}catch(e){toast('Could not create workspace: '+e.message,'error')}};
 async function renderWorkspaceCollab(w,tasks,requestId){const current=()=>requestId===workspaceLoadSeq&&activeWorkspaceId===w.id;const el=id=>$(id);if(!current()||!el('workspaceContent'))return;const escText=v=>esc(v||'');const {data:memberRows,error:memberError}=await supa.from('uniplanner_workspace_members').select('user_id').eq('workspace_id',w.id);if(memberError)throw memberError;if(!current())return;const profiles=await loadWorkspaceProfiles((memberRows||[]).map(m=>m.user_id));if(!current())return;const nameFor=id=>profiles.get(id)||(id===user.id?prefs.displayName:'')||'Member';$('discussionTask').innerHTML=tasks.length?tasks.map(t=>'<option value="'+esc(t.id)+'">'+esc(t.title)+'</option>').join(''):'<option value="">No tasks yet</option>';const {data:notes,error:ne}=await supa.from('uniplanner_workspace_notes').select('id,title,body,created_by,created_at').eq('workspace_id',w.id).order('created_at',{ascending:false}).limit(100);if(ne)throw ne;if(!current())return;const notesList=el('teamNotesList');if(!notesList)return;notesList.innerHTML=(notes||[]).length?notes.map(n=>'<div class="task"><div class="task-main"><div class="task-title">'+escText(n.title)+'</div><div class="task-meta">'+escText(nameFor(n.created_by))+' · '+escText(new Date(n.created_at).toLocaleString())+'</div><div class="sub">'+escText(n.body)+'</div></div></div>').join(''):'<div class="empty">No shared notes yet.</div>';$('saveTeamNote').onclick=async()=>{const title=$('teamNoteTitle').value.trim(),body=$('teamNoteBody').value.trim();if(!title||!body){toast('Add a title and note first.','error');return}try{const {error}=await supa.from('uniplanner_workspace_notes').insert({workspace_id:w.id,created_by:user.id,title,body});if(error)throw error;$('teamNoteTitle').value='';$('teamNoteBody').value='';await renderWorkspaceCollab(w,tasks);toast('Shared note posted.')}catch(e){toast('Could not share note: '+e.message,'error')}};const refreshComments=async()=>{const taskId=$('discussionTask').value;if(!taskId){$('taskCommentsList').innerHTML='<div class="empty">Choose a task to see its discussion.</div>';return}const {data:comments,error}=await supa.from('uniplanner_task_comments').select('id,task_id,created_by,body,created_at').eq('workspace_id',w.id).eq('task_id',taskId).order('created_at',{ascending:true}).limit(200);if(error)throw error;if(!current())return;const commentsList=el('taskCommentsList');if(!commentsList)return;commentsList.innerHTML=(comments||[]).length?comments.map(c=>'<div class="task"><div class="task-main"><div class="task-meta">'+escText(nameFor(c.created_by))+' · '+escText(new Date(c.created_at).toLocaleString())+'</div><div class="sub">'+escText(c.body)+'</div></div></div>').join(''):'<div class="empty">No comments yet. Start the discussion.</div>'};$('discussionTask').onchange=()=>refreshComments().catch(e=>toast('Could not load comments: '+e.message,'error'));$('postTaskComment').onclick=async()=>{const taskId=$('discussionTask').value,body=$('taskCommentText').value.trim();if(!taskId||!body){toast('Choose a task and write a comment.','error');return}try{const {error}=await supa.from('uniplanner_task_comments').insert({workspace_id:w.id,task_id:taskId,created_by:user.id,body});if(error)throw error;$('taskCommentText').value='';await refreshComments();toast('Comment posted.')}catch(e){toast('Could not post comment: '+e.message,'error')}};await refreshComments();const refreshChat=async()=>{const {data:messages,error}=await supa.from('uniplanner_group_messages').select('id,created_by,body,created_at').eq('workspace_id',w.id).order('created_at',{ascending:true}).limit(200);if(error)throw error;if(!current())return;const chatList=el('groupChatList');if(!chatList)return;chatList.innerHTML=(messages||[]).length?messages.map(m=>'<div class="task"><div class="task-main"><div class="task-meta"><strong>'+escText(nameFor(m.created_by))+'</strong> · '+escText(new Date(m.created_at).toLocaleString())+'</div><div class="sub">'+escText(m.body)+'</div></div></div>').join(''):'<div class="empty">No messages yet. Say hello to your group.</div>';const chatEl=$('groupChatList');if(chatEl)chatEl.scrollTop=chatEl.scrollHeight};$('sendGroupChat').onclick=async()=>{const body=$('groupChatText').value.trim();if(!body){toast('Write a message first.','error');return}try{const {error}=await supa.from('uniplanner_group_messages').insert({workspace_id:w.id,created_by:user.id,body});if(error)throw error;$('groupChatText').value='';await refreshChat();toast('Message sent.')}catch(e){toast('Could not send message: '+e.message,'error')}};await refreshChat()}
 function renderFaculty(){const a=data.faculty;$('facultyList').innerHTML=a.length?a.map(f=>'<div class="task"><div class="task-main"><div class="task-title">'+esc(f.name)+'</div><div class="task-meta">'+[f.course,f.email,f.office].filter(Boolean).map(esc).join(' · ')+'</div>'+(f.notes?'<div class="sub">'+esc(f.notes)+'</div>':'')+'</div><button class="mini" data-edit-faculty="'+esc(f.id)+'">✎</button><button class="mini" data-delete-faculty="'+esc(f.id)+'">✕</button></div>').join(''):'<div class="empty">Add an instructor to keep useful details in one place.</div>';document.querySelectorAll('[data-edit-faculty]').forEach(b=>b.onclick=()=>openModal('faculty',b.dataset.editFaculty));document.querySelectorAll('[data-delete-faculty]').forEach(b=>b.onclick=()=>{if(confirm('Delete this contact?')){data.faculty=data.faculty.filter(f=>f.id!==b.dataset.deleteFaculty);save()}})}
 function renderNotes(){$('notesList').innerHTML=data.notes.length?[...data.notes].reverse().map(n=>'<div class="note"><div class="row" style="justify-content:space-between"><h4>'+esc(n.title)+'</h4><div><button class="mini" data-edit-note="'+esc(n.id)+'">✎</button><button class="mini" data-delete-note="'+esc(n.id)+'">✕</button></div></div><p>'+esc(n.body)+'</p></div>').join(''):'<div class="empty">No saved notes yet.</div>';document.querySelectorAll('[data-edit-note]').forEach(b=>b.onclick=()=>openModal('note',b.dataset.editNote));document.querySelectorAll('[data-delete-note]').forEach(b=>b.onclick=()=>{if(confirm('Delete this note?')){data.notes=data.notes.filter(n=>n.id!==b.dataset.deleteNote);save()}})}
-$('scratchpad').addEventListener('input',()=>{data.scratchpad=$('scratchpad').value;try{localStorage.setItem(KEY,JSON.stringify(data));localStorage.setItem('uniplanner_v2_updated',String(Date.now()));$('noteStatus').textContent='Saved just now'}catch{$('noteStatus').textContent='Could not save'}scheduleCloudPush()});$('clearScratch').onclick=()=>{if(confirm('Clear the scratchpad?')){$('scratchpad').value='';data.scratchpad='';save();toast('Scratchpad cleared.')}};$('addNote').onclick=()=>openModal('note');
+$('scratchpad').addEventListener('input',()=>{data.scratchpad=$('scratchpad').value;try{localStorage.setItem(KEY,JSON.stringify(data));localStorage.setItem('uniplanner_test_v2_updated',String(Date.now()));$('noteStatus').textContent='Saved just now'}catch{$('noteStatus').textContent='Could not save'}scheduleCloudPush()});$('clearScratch').onclick=()=>{if(confirm('Clear the scratchpad?')){$('scratchpad').value='';data.scratchpad='';save();toast('Scratchpad cleared.')}};$('addNote').onclick=()=>openModal('note');
 function timerSet(){const m=Math.floor(remaining/60),s=remaining%60;$('timerFace').textContent=String(m).padStart(2,'0')+':'+String(s).padStart(2,'0');$('timerModeLabel').textContent=mode==='focus'?'FOCUS SESSION':'BREAK TIME';$('timerState').textContent=started?'Stay with it.': 'Ready when you are';$('timerStart').textContent=started?'Pause':'Start '+(mode==='focus'?'focus':'break')}
 function timerStop(){if(timer){clearInterval(timer);timer=null}started=false;timerSet()}
 function timerBegin(){if(started){timerStop();return}started=true;timerSet();timer=setInterval(()=>{remaining--;timerSet();if(remaining<=0){clearInterval(timer);timer=null;started=false;if(mode==='focus'){data.focusSessions=(data.focusSessions||0)+1;$('sessionsDone').textContent=data.focusSessions;save();toast('Focus session complete. Take a breath.')}else toast('Break finished. Ready for another round?');mode=mode==='focus'?'break':'focus';remaining=(Number($(mode==='focus'?'focusMinutes':'breakMinutes').value)|| (mode==='focus'?25:5))*60;timerSet()}},1000)}
 $('timerStart').onclick=timerBegin;$('timerReset').onclick=()=>{timerStop();remaining=(Number($(mode==='focus'?'focusMinutes':'breakMinutes').value)||25)*60;timerSet()};$('timerBreak').onclick=()=>{timerStop();mode='break';remaining=(Number($('breakMinutes').value)||5)*60;timerSet()};$('focusMinutes').onchange=()=>{if(!started&&mode==='focus'){remaining=Math.max(1,Math.min(180,Number($('focusMinutes').value)||25))*60;timerSet()}};$('breakMinutes').onchange=()=>{if(!started&&mode==='break'){remaining=Math.max(1,Math.min(60,Number($('breakMinutes').value)||5))*60;timerSet()}};
-function scheduleReminderCheck(){if(prefs.reminderMode!=='once'||!('Notification'in window)||Notification.permission!=='granted')return;const now=Date.now();data.reminded=data.reminded||[];for(const t of data.tasks){if(t.completed||!t.date||t.date<today()||data.reminded.includes(t.id))continue;if(t.date!==today())continue;const due=t.time?new Date(t.date+'T'+t.time).getTime():new Date(t.date+'T09:00').getTime();if(due<=now){try{new Notification('UniPlanner · '+t.title,{body:'This task is due. Open your planner to review it.',tag:'uniplanner-'+t.id,renotify:false});data.reminded.push(t.id);localStorage.setItem(KEY,JSON.stringify(data))}catch(e){console.warn('Notification unavailable',e)}}}}
-$('reminderMode').onchange=async()=>{if($('reminderMode').value==='once'&&'Notification'in window){if(!window.isSecureContext){$('reminderMode').value='off';toast('Notifications require HTTPS or localhost.','error');return}const permission=await Notification.requestPermission();if(permission!=='granted'){$('reminderMode').value='off';toast('Browser notification permission was not granted.','error')}}savePrefs()};
+const NOTIFICATION_LEDGER='uniplanner_test_v2_notification_ledger';function readNotificationLedger(){try{const value=JSON.parse(localStorage.getItem(NOTIFICATION_LEDGER)||'{}');return value&&typeof value==='object'&&!Array.isArray(value)?value:{}}catch{return {}}}function writeNotificationLedger(ledger){const keys=Object.keys(ledger);for(const key of keys.slice(0,Math.max(0,keys.length-1000)))delete ledger[key];try{localStorage.setItem(NOTIFICATION_LEDGER,JSON.stringify(ledger))}catch(e){console.warn('Could not save notification history',e)}}let notificationServiceWorkerRegistration=null;if('serviceWorker'in navigator&&window.isSecureContext){navigator.serviceWorker.register('./sw.js').then(reg=>{notificationServiceWorkerRegistration=reg}).catch(e=>console.warn('Service worker unavailable; using browser notifications where supported',e))}async function sendPlannerNotification(key,title,body){const ledger=readNotificationLedger();if(ledger[key])return false;try{if('serviceWorker'in navigator&&window.isSecureContext){const reg=notificationServiceWorkerRegistration||await navigator.serviceWorker.ready;await reg.showNotification(title,{body,tag:key,renotify:false,icon:'./notification-icon.svg',badge:'./notification-icon.svg'})}else{const n=new Notification(title,{body,tag:key,renotify:false});n.onclick=()=>{window.focus();n.close()}}ledger[key]=Date.now();writeNotificationLedger(ledger);return true}catch(e){console.warn('Notification unavailable on this browser/context',e);return false}}function scheduleReminderCheck(){if(prefs.reminderMode!=='once'||!('Notification'in window)||Notification.permission!=='granted')return;const now=Date.now(),lead=Math.max(10,Math.min(1440,Number(prefs.reminderLeadMinutes)||30))*60000;for(const t of data.tasks){if(t.completed||!t.date)continue;const due=new Date(t.date+'T'+(t.time||'23:59')).getTime();if(!Number.isFinite(due))continue;const title=String(t.title||'Task');if(due>now&&due-now<=lead)sendPlannerNotification('task-upcoming:'+t.id+':'+due,'UniPlanner · Upcoming deadline',title+' is due '+(t.time?'at '+t.time:'today')+'.');if(prefs.overdueAlerts&&due<=now)sendPlannerNotification('task-overdue:'+t.id+':'+today(),'UniPlanner · Overdue task',title+' is overdue. Open UniPlanner to review it.')}}
+$('reminderMode').onchange=async()=>{if($('reminderMode').value==='once'){if(!('Notification'in window)){$('reminderMode').value='off';toast('This browser does not support notifications.','error');return}if(!window.isSecureContext){$('reminderMode').value='off';toast('Notifications require HTTPS or localhost.','error');return}const permission=await Notification.requestPermission();if(permission!=='granted'){$('reminderMode').value='off';toast('Browser notification permission was not granted.','error');return}}savePrefs()};$('reminderLeadMinutes').onchange=()=>{persistPrefsFromForm();scheduleReminderCheck()};$('overdueAlerts').onchange=()=>{persistPrefsFromForm();scheduleReminderCheck()};$('groupNotifications').onchange=async()=>{if($('groupNotifications').checked){if(!('Notification'in window)||!window.isSecureContext){$('groupNotifications').checked=false;toast('This browser cannot show notifications here.','error');return}if(Notification.permission!=='granted'){const permission=await Notification.requestPermission();if(permission!=='granted'){$('groupNotifications').checked=false;toast('Browser notification permission was not granted.','error');return}}}persistPrefsFromForm();startGroupNotificationFeed();toast($('groupNotifications').checked?'Study Group activity alerts enabled for this signed-in session.':'Study Group activity alerts disabled.')};
 let pushTimer=null;function scheduleCloudPush(){if(!user||!supa)return;clearTimeout(pushTimer);pushTimer=setTimeout(()=>cloudPush(),1200)}
 function escapeAdminText(value){return String(value??'').replace(/[&<>\"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;',"'":'&#39;'}[c]))}
-async function refreshAdminVisibility(){const nav=$('adminNav');if(!nav||!supa||!user||!accessGranted){if(nav)nav.style.display='none';return false}try{const {data,error}=await supa.rpc('uniplanner_is_admin');if(error)throw error;const yes=data===true;nav.style.display=yes?'flex':'none';if(!yes&&document.getElementById('page-admin')?.classList.contains('active'))switchPage('dashboard');return yes}catch(e){nav.style.display='none';return false}}
+async function refreshAdminVisibility(){const nav=$('adminNav'),config=$('supabaseConfigFields');if(config)config.style.display='none';if(!nav||!supa||!user||!accessGranted){if(nav)nav.style.display='none';return false}try{const {data,error}=await supa.rpc('uniplanner_is_admin');if(error)throw error;const yes=data===true;nav.style.display=yes?'flex':'none';if(config)config.style.display=yes?'block':'none';if(!yes&&document.getElementById('page-admin')?.classList.contains('active'))switchPage('dashboard');return yes}catch(e){nav.style.display='none';if(config)config.style.display='none';return false}}
 async function loadAdminPanel(){if(!await refreshAdminVisibility()){toast('Owner permission is required for this panel.','error');return}await Promise.all([loadAdminUsers(),loadAdminMemberships()])}
 async function loadAdminUsers(){const box=$('adminUsers');try{const {data,error}=await supa.rpc('uniplanner_admin_list_users');if(error)throw error;const rows=data||[];$('adminUserCount').textContent=rows.length+' account'+(rows.length===1?'':'s');if(!rows.length){box.innerHTML='<div class="empty">No accounts found.</div>';return}box.innerHTML='<div style="overflow-x:auto"><table style="width:100%;border-collapse:collapse;font-size:12px"><thead><tr style="color:var(--muted);text-align:left"><th style="padding:10px">Account</th><th style="padding:10px">Status</th><th style="padding:10px">Created</th><th style="padding:10px">Action</th></tr></thead><tbody>'+rows.map(r=>{const status=['approved','revoked','pending'].includes(r.status)?r.status:'pending';const isSelf=r.user_id===user.id;const action=status==='approved'?'Revoke access':'Approve access';const next=status==='approved'?'revoked':'approved';return '<tr style="border-top:1px solid var(--line)"><td style="padding:11px 10px;overflow-wrap:anywhere"><strong>'+escapeAdminText(r.display_name||r.email||'Unnamed account')+'</strong><div class="sub">'+escapeAdminText(r.email||r.user_id)+'</div></td><td style="padding:11px 10px"><span class="tag '+(status==='approved'?'low':status==='revoked'?'high':'medium')+'">'+escapeAdminText(status)+'</span></td><td style="padding:11px 10px;white-space:nowrap">'+(r.created_at?new Date(r.created_at).toLocaleDateString():'—')+'</td><td style="padding:11px 10px;white-space:nowrap"><button class="btn '+(next==='approved'?'primary':'')+'" data-admin-user="'+escapeAdminText(r.user_id)+'" data-admin-status="'+next+'" '+(isSelf&&next==='revoked'?'disabled title="You cannot revoke your own access"':'')+'>'+action+'</button></td></tr>'}).join('')+'</tbody></table></div>';box.querySelectorAll('[data-admin-user]').forEach(b=>b.onclick=async()=>{const id=b.dataset.adminUser,status=b.dataset.adminStatus;if(!confirm((status==='approved'?'Approve this account for all of UniPlanner?':'Revoke this account’s access to all of UniPlanner? The account and data will not be deleted.')))return;b.disabled=true;try{const {error}=await supa.rpc('uniplanner_admin_set_access',{p_user_id:id,p_status:status});if(error)throw error;toast(status==='approved'?'Account approved.':'Website access revoked.');await loadAdminUsers()}catch(e){toast('Could not update access: '+e.message,'error');b.disabled=false}})}catch(e){box.innerHTML='<div class="empty">Could not load accounts: '+escapeAdminText(e.message)+'</div>';$('adminUserCount').textContent='Unavailable'}}
 async function loadAdminMemberships(){const box=$('adminMemberships');try{const {data,error}=await supa.rpc('uniplanner_admin_list_memberships');if(error)throw error;const rows=data||[];if(!rows.length){box.innerHTML='<div class="empty">No workspace memberships yet.</div>';return}box.innerHTML='<div style="overflow-x:auto"><table style="width:100%;border-collapse:collapse;font-size:12px"><thead><tr style="color:var(--muted);text-align:left"><th style="padding:10px">Workspace</th><th style="padding:10px">Member</th><th style="padding:10px">Role</th><th style="padding:10px">Action</th></tr></thead><tbody>'+rows.map(r=>'<tr style="border-top:1px solid var(--line)"><td style="padding:11px 10px">'+escapeAdminText(r.workspace_name)+'</td><td style="padding:11px 10px;overflow-wrap:anywhere">'+escapeAdminText(r.email||r.user_id)+'</td><td style="padding:11px 10px">'+escapeAdminText(r.member_role)+'</td><td style="padding:11px 10px">'+(r.member_role==='owner'?'<span class="sub">Protected</span>':'<button class="btn" data-admin-workspace="'+escapeAdminText(r.workspace_id)+'" data-admin-member="'+escapeAdminText(r.user_id)+'">Remove member</button>')+'</td></tr>').join('')+'</tbody></table></div>';box.querySelectorAll('[data-admin-workspace]').forEach(b=>b.onclick=async()=>{if(!confirm('Remove this person from this workspace only? Their account and planner data will remain.'))return;b.disabled=true;try{const {error}=await supa.rpc('uniplanner_admin_remove_workspace_member',{p_workspace_id:b.dataset.adminWorkspace,p_user_id:b.dataset.adminMember});if(error)throw error;toast('Workspace membership removed.');await loadAdminMemberships()}catch(e){toast('Could not remove member: '+e.message,'error');b.disabled=false}})}catch(e){box.innerHTML='<div class="empty">Could not load memberships: '+escapeAdminText(e.message)+'</div>'}}
 async function sendAdminInvitation(event){event.preventDefault();if(!await refreshAdminVisibility()){toast('Owner permission is required to invite users.','error');return}const email=$('adminInviteEmail').value.trim().toLowerCase();const button=$('adminInviteSubmit'),message=$('adminInviteMessage');if(!email||!email.includes('@')){message.textContent='Enter a valid email address.';return}button.disabled=true;message.textContent='Sending invitation…';try{const {data,error}=await supa.functions.invoke('admin-invite-user',{body:{email}});if(error)throw error;if(data?.error)throw new Error(data.error);message.textContent='Invitation sent to '+email+'. They can choose their own password from the email link; their UniPlanner access remains pending until you approve them.';$('adminInviteEmail').value='';toast('Invitation sent.');await loadAdminUsers()}catch(e){console.error('Admin invitation failed',e);message.textContent='Could not send invitation: '+(e.message||'Unknown error')+' Check the Edge Function deployment, secrets, and Supabase email settings.';toast('Invitation failed. Check the message in the admin panel.','error')}finally{button.disabled=false}}$('adminInviteForm').addEventListener('submit',sendAdminInvitation);$('adminRefresh').onclick=loadAdminPanel;
-function setGateMessage(message){const el=$('accessMessage');el.textContent=message;el.className='gate-message';if(/not approved|pending|revoked|contact the owner|contact them directly|denied|could not verify|failed|incorrect|error/i.test(message||''))el.classList.add('gate-error');else if(/approved|signed out|success/i.test(message||''))el.classList.add('gate-success');else el.classList.add('gate-info')}function lockApp(message){accessGranted=false;document.body.classList.add('access-locked');$('accessSignOut').style.display=user?'block':'none';$('accessSignIn').disabled=false;if(message)setGateMessage(message);syncUi()}async function verifyAccess(silent=false){if(!supa||!user){lockApp('Sign in with an owner-approved account to continue.');return false}if(accessCheckBusy)return accessGranted;accessCheckBusy=true;try{const {data:row,error}=await supa.from('uniplanner_access').select('status').eq('user_id',user.id).maybeSingle();if(error)throw error;if(row?.status!=='approved'){lockApp('This account is not approved for UniPlanner. Contact the owner if you think this is a mistake.');return false}accessGranted=true;document.body.classList.remove('access-locked');$('accessSignOut').style.display='none';setGateMessage('Access approved.');syncUi();refreshAdminVisibility();if(!silent){await loadMyProfile();await syncMyProfile();await cloudPull()}return true}catch(e){console.error(e);lockApp('Could not verify access with the server. Check your connection and try again.');return false}finally{accessCheckBusy=false}}function initSupabase(){if(!window.supabase){$('syncStatus').textContent='Cloud library unavailable';lockApp('Could not load the secure sign-in service. Refresh the page or try again later.');return}supa=window.supabase.createClient(SUPABASE_URL,SUPABASE_KEY,{auth:{persistSession:true,autoRefreshToken:true,detectSessionInUrl:true}});supa.auth.getSession().then(async({data:d,error})=>{if(error)throw error;user=d.session?.user||null;syncUi();if(user)await verifyAccess(false);else lockApp('Sign in with an owner-approved account to continue.')}).catch(e=>{console.error(e);lockApp('Could not check your session. Refresh the page and try again.')})}
+function setGateMessage(message){const el=$('accessMessage');el.textContent=message;el.className='gate-message';if(/not approved|pending|revoked|contact the owner|contact them directly|denied|could not verify|failed|incorrect|error/i.test(message||''))el.classList.add('gate-error');else if(/approved|signed out|success/i.test(message||''))el.classList.add('gate-success');else el.classList.add('gate-info')}function lockApp(message){accessGranted=false;stopGroupNotificationFeed();document.body.classList.add('access-locked');$('accessSignOut').style.display=user?'block':'none';$('accessSignIn').disabled=false;if(message)setGateMessage(message);syncUi()}async function verifyAccess(silent=false){if(!supa||!user){lockApp('Sign in with an owner-approved account to continue.');return false}if(accessCheckBusy)return accessGranted;accessCheckBusy=true;try{const {data:row,error}=await supa.from('uniplanner_access').select('status').eq('user_id',user.id).maybeSingle();if(error)throw error;if(row?.status!=='approved'){lockApp('This account is not approved for UniPlanner. Contact the owner if you think this is a mistake.');return false}accessGranted=true;document.body.classList.remove('access-locked');$('accessSignOut').style.display='none';setGateMessage('Access approved.');syncUi();refreshAdminVisibility();startGroupNotificationFeed();if(!silent){await loadMyProfile();await syncMyProfile();await cloudPull()}return true}catch(e){console.error(e);lockApp('Could not verify access with the server. Check your connection and try again.');return false}finally{accessCheckBusy=false}}function initSupabase(){if(!window.supabase){$('syncStatus').textContent='Cloud library unavailable';lockApp('Could not load the secure sign-in service. Refresh the page or try again later.');return}supa=window.supabase.createClient(SUPABASE_URL,SUPABASE_KEY,{auth:{persistSession:true,autoRefreshToken:true,detectSessionInUrl:true}});supa.auth.getSession().then(async({data:d,error})=>{if(error)throw error;user=d.session?.user||null;syncUi();if(user)await verifyAccess(false);else lockApp('Sign in with an owner-approved account to continue.')}).catch(e=>{console.error(e);lockApp('Could not check your session. Refresh the page and try again.')})}
 async function loadMyProfile(){if(!supa||!user)return;const {data:profile,error}=await supa.from('uniplanner_profiles').select('display_name').eq('user_id',user.id).maybeSingle();if(error)throw error;if(profile?.display_name){prefs.displayName=profile.display_name;$('displayName').value=profile.display_name;try{localStorage.setItem(PREF,JSON.stringify(prefs))}catch{}}}
 async function syncMyProfile(){if(!supa||!user)return;const display_name=String(prefs.displayName||'').trim();if(!display_name)return;if(display_name.length>40){toast('Display name must be 40 characters or fewer.','error');return}const {error}=await supa.from('uniplanner_profiles').upsert({user_id:user.id,display_name,updated_at:new Date().toISOString()},{onConflict:'user_id'});if(error)throw error}
 async function loadWorkspaceProfiles(userIds){if(!supa||!userIds?.length)return new Map();const ids=[...new Set(userIds.filter(Boolean))];if(!ids.length)return new Map();const {data:profiles,error}=await supa.from('uniplanner_profiles').select('user_id,display_name').in('user_id',ids);if(error)throw error;return new Map((profiles||[]).map(p=>[p.user_id,p.display_name]))}
-function syncUi(){$('syncStatus').textContent=!supa?'Cloud not configured':user?(accessGranted?'Signed in · '+user.email:'Signed in · access pending'):'Connected · sign in to sync';$('signOutBtn').disabled=!user;$('syncNowBtn').disabled=!user;if(user&&accessGranted)loadWorkspaces()}
+let groupNotificationChannel=null;function stopGroupNotificationFeed(){if(groupNotificationChannel&&supa){try{supa.removeChannel(groupNotificationChannel)}catch(e){console.warn('Could not stop group notification feed',e)}}groupNotificationChannel=null}function startGroupNotificationFeed(){stopGroupNotificationFeed();if(!prefs.groupNotifications||!supa||!user||!accessGranted||!('Notification'in window)||Notification.permission!=='granted')return;const notifyGroup=(payload,kind)=>{const row=payload?.new;if(!row||row.created_by===user.id)return;const id=row.id||row.created_at||Date.now();void sendPlannerNotification('group:'+kind+':'+id,'UniPlanner · Study Group activity',kind==='message'?'A member posted a new group chat message.':kind==='comment'?'A member commented on a shared task.':'A new shared task was added.')};groupNotificationChannel=supa.channel('uniplanner-group-notifications-'+user.id).on('postgres_changes',{event:'INSERT',schema:'public',table:'uniplanner_group_messages'},p=>notifyGroup(p,'message')).on('postgres_changes',{event:'INSERT',schema:'public',table:'uniplanner_task_comments'},p=>notifyGroup(p,'comment')).on('postgres_changes',{event:'INSERT',schema:'public',table:'uniplanner_shared_tasks'},p=>notifyGroup(p,'task')).subscribe((status,error)=>{if(status==='SUBSCRIBED'){console.info('Study Group notification feed connected')}else if(status==='CHANNEL_ERROR'||status==='TIMED_OUT'||status==='CLOSED'){console.error('Study Group notification feed status:',status,error||'No additional error details.');toast('Study Group alerts lost their live connection. Check Realtime is enabled for group messages, task comments, and shared tasks, then reopen Settings.','error')}})}function syncUi(){$('syncStatus').textContent=!supa?'Cloud not configured':user?(accessGranted?'Signed in · '+user.email:'Signed in · access pending'):'Connected · sign in to sync';$('signOutBtn').disabled=!user;$('syncNowBtn').disabled=!user;if(user&&accessGranted)loadWorkspaces()}
 $('signInBtn').onclick=async()=>{if(!supa){toast('Secure sign-in is not available yet. Refresh and try again.','error');return}const email=$('syncEmail').value.trim(),password=$('syncPassword').value;if(!email||!password){toast('Enter your account email and password.','error');return}try{const {data:r,error}=await supa.auth.signInWithPassword({email,password});if(error)throw error;user=r.user;syncUi();const ok=await verifyAccess(false);if(ok)toast('Signed in. Sync is ready.')}catch(e){toast(e.message||'Sign-in failed. Check your credentials.','error')}};document.getElementById('gateLoginForm').onsubmit=async e=>{e.preventDefault();if(!supa){setGateMessage('Secure sign-in is still loading. Please wait a moment and try again.');return}const email=$('accessEmail').value.trim(),password=$('accessPassword').value;if(!email||!password)return;$('accessSignIn').disabled=true;setGateMessage('Signing in and checking approval…');try{const {data:r,error}=await supa.auth.signInWithPassword({email,password});if(error)throw error;user=r.user;syncUi();await verifyAccess(false)}catch(err){lockApp(/invalid login credentials/i.test(err.message||'')?'Email or password is incorrect.':'Sign-in failed: '+(err.message||'please try again.'))}finally{$('accessSignIn').disabled=false}};
 $('signOutBtn').onclick=async()=>{if(supa)await supa.auth.signOut();user=null;lockApp('Signed out. Sign in with an owner-approved account to continue.');toast('Signed out. Local data remains on this device.')};$('accessSignOut').onclick=async()=>{if(supa)await supa.auth.signOut();user=null;lockApp('Signed out. Sign in with an owner-approved account to continue.');$('accessPassword').value=''};
-async function cloudPull(){if(!supa||!user)return;try{$('syncStatus').textContent='Checking cloud…';const {data:r,error}=await supa.from('uniplanner_data').select('payload,updated_at').eq('user_id',user.id).maybeSingle();if(error)throw error;if(r&&r.payload){const local=Number(localStorage.getItem('uniplanner_v2_updated')||0),remote=Date.parse(r.updated_at)||0;if(remote>local){if(confirm('A newer backup exists in the cloud. Replace this device\'s data with the cloud copy? Export a backup first if unsure.')){data={...blank(),...r.payload,schema:SCHEMA};localStorage.setItem(KEY,JSON.stringify(data));localStorage.setItem('uniplanner_v2_updated',String(remote));renderAll();toast('Cloud data loaded.')}else toast('Kept this device\'s data. Use Sync now to upload it.')}else await cloudPush()}else await cloudPush();$('syncStatus').textContent='Synced · '+new Date().toLocaleTimeString()}catch(e){console.error(e);$('syncStatus').textContent='Sync failed';toast('Cloud sync failed: '+(e.message||'check table and RLS setup'),'error')}}
-async function cloudPush(){if(!supa||!user)return;try{$('syncStatus').textContent='Syncing…';const payload={...data};const {error}=await supa.from('uniplanner_data').upsert({user_id:user.id,payload,updated_at:new Date().toISOString()},{onConflict:'user_id'});if(error)throw error;localStorage.setItem('uniplanner_v2_updated',String(Date.now()));$('syncStatus').textContent='Synced · '+new Date().toLocaleTimeString()}catch(e){console.error(e);$('syncStatus').textContent='Sync failed — local copy safe';toast('Cloud sync failed. Your local copy is still saved. '+(e.message||''),'error')}}
+async function cloudPull(){if(!supa||!user)return;try{$('syncStatus').textContent='Checking cloud…';const {data:r,error}=await supa.from('uniplanner_data').select('payload,updated_at').eq('user_id',user.id).maybeSingle();if(error)throw error;if(r&&r.payload){const local=Number(localStorage.getItem('uniplanner_test_v2_updated')||0),remote=Date.parse(r.updated_at)||0;if(remote>local){if(confirm('A newer backup exists in the cloud. Replace this device\'s data with the cloud copy? Export a backup first if unsure.')){data={...blank(),...r.payload,schema:SCHEMA};localStorage.setItem(KEY,JSON.stringify(data));localStorage.setItem('uniplanner_test_v2_updated',String(remote));renderAll();toast('Cloud data loaded.')}else toast('Kept this device\'s data. Use Sync now to upload it.')}else await cloudPush()}else await cloudPush();$('syncStatus').textContent='Synced · '+new Date().toLocaleTimeString()}catch(e){console.error(e);$('syncStatus').textContent='Sync failed';toast('Cloud sync failed: '+(e.message||'check table and RLS setup'),'error')}}
+async function cloudPush(){if(!supa||!user)return;try{$('syncStatus').textContent='Syncing…';const payload={...data};const {error}=await supa.from('uniplanner_data').upsert({user_id:user.id,payload,updated_at:new Date().toISOString()},{onConflict:'user_id'});if(error)throw error;localStorage.setItem('uniplanner_test_v2_updated',String(Date.now()));$('syncStatus').textContent='Synced · '+new Date().toLocaleTimeString()}catch(e){console.error(e);$('syncStatus').textContent='Sync failed — local copy safe';toast('Cloud sync failed. Your local copy is still saved. '+(e.message||''),'error')}}
 $('syncNowBtn').onclick=()=>cloudPull();$('savePrefs').onclick=async()=>{persistPrefsFromForm();if(supa&&user){try{await syncMyProfile();await loadWorkspaces();toast('Preferences and display name saved.')}catch(e){toast('Preferences saved locally, but profile sync failed: '+e.message,'error')}}else{try{localStorage.setItem(PREF,JSON.stringify(prefs))}catch{}initSupabase();toast('Preferences saved. Sign in to sync your display name.')}};
-function renderAll(){renderStats();renderTasks();renderCalendars();renderClasses();renderGrades();renderFaculty();renderNotes();timerSet();loadWorkspaces()}
+function renderAll(){renderStats();renderTasks();renderCalendars();renderClasses();renderGrades();renderFaculty();renderNotes();timerSet();loadWorkspaces();window.UniPlannerSemester?.render()}
 function exportData(){try{const envelope={app:'UniPlanner',schema:SCHEMA,exportedAt:new Date().toISOString(),data};const blob=new Blob([JSON.stringify(envelope,null,2)],{type:'application/json'}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='uniplanner-backup-'+today()+'.json';document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1000);toast('Backup exported. Keep it somewhere safe.')}catch(e){console.error(e);toast('Could not export backup: '+(e.message||'unknown error'),'error')}}
 $('exportBtn').onclick=exportData;$('exportSettings').onclick=exportData;$('importBtn').onclick=()=>$('importFile').click();$('importFile').onchange=async e=>{const file=e.target.files?.[0];if(!file)return;try{if(file.size>10*1024*1024)throw Error('Backup is larger than 10 MB. Choose a smaller JSON backup.');const p=JSON.parse(await file.text()),candidate=p?.app==='UniPlanner'?p.data:p;if(!candidate||typeof candidate!=='object'||!Array.isArray(candidate.tasks)||!Array.isArray(candidate.classes)||!Array.isArray(candidate.grades)||!Array.isArray(candidate.faculty)||!Array.isArray(candidate.notes))throw Error('Invalid backup: expected a UniPlanner JSON file with tasks, classes, grades, faculty and notes.');for(const [name,arr] of Object.entries({tasks:candidate.tasks,classes:candidate.classes,grades:candidate.grades,faculty:candidate.faculty,notes:candidate.notes})){if(arr.length>20000||arr.some(x=>!x||typeof x!=='object'||Array.isArray(x)))throw Error('Invalid '+name+' data in backup. Nothing was changed.')}if(candidate.tasks.some(t=>typeof t.title!=='string'||typeof t.date!=='string'))throw Error('Invalid task records in backup. Nothing was changed.');if(!confirm('Replace this device’s current planner with '+candidate.tasks.length+' tasks, '+candidate.classes.length+' classes, '+candidate.grades.length+' grades and '+candidate.notes.length+' notes? Export your current data first if you want to keep it.'))return;data={...blank(),...candidate,schema:SCHEMA};save();$('scratchpad').value=data.scratchpad||'';$('sessionsDone').textContent=data.focusSessions||0;renderAll();toast('Backup imported and saved.')}catch(err){toast(err.message||'Could not import this file.','error')}finally{e.target.value=''}};
 $('addTop').onclick=$('addDash').onclick=$('addCalendar').onclick=$('addTasks').onclick=()=>openModal('task');$('addSelectedDate').onclick=()=>openModal('task',null,{date:selectedDate});$('addClass').onclick=()=>openModal('class');$('addGrade').onclick=()=>openModal('grade');$('addFaculty').onclick=()=>openModal('faculty');
 const script=document.createElement('script');script.src='https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2';script.async=true;script.onload=()=>initSupabase();script.onerror=()=>{ $('syncStatus').textContent='Cloud SDK could not load';lockApp('Could not load the secure sign-in service. Refresh the page or try again later.')};document.head.append(script);setInterval(()=>{if(user&&accessGranted)verifyAccess(true)},60000);
-load();renderAll();setInterval(scheduleReminderCheck,30000);
+load();renderAll();window.UniPlannerSemester={get data(){return data},save,toast,esc,uid,today,switchPage};setInterval(scheduleReminderCheck,30000);
+
+/* Workspace projects and shared resource library */
+let workspaceTab='overview';
+const loadWorkspaceTasksBeforeTabs=loadWorkspaceTasks;
+loadWorkspaceTasks=async function(){
+ await loadWorkspaceTasksBeforeTabs();
+ const root=$('workspaceContent'),w=workspaces.find(x=>x.id===activeWorkspaceId);
+ if(!root||!w||!supa||!user||root.querySelector('.workspace-tabs'))return;
+ const overview=document.createElement('div');overview.id='workspaceOverviewTab';
+ while(root.firstChild)overview.appendChild(root.firstChild);
+ const tabs=document.createElement('div');tabs.className='workspace-tabs';
+ tabs.innerHTML='<button class="btn" data-wtab="overview">Overview</button><button class="btn" data-wtab="projects">Projects</button><button class="btn" data-wtab="resources">Notes &amp; resources</button><button class="btn" data-wtab="requests">Join requests</button><button class="btn" data-wtab="settings">Settings</button>';
+ const extra=document.createElement('div');extra.id='workspaceExtraTab';
+ root.append(tabs,overview,extra);
+ tabs.querySelectorAll('[data-wtab]').forEach(b=>b.onclick=()=>showWorkspaceTab(b.dataset.wtab,w,overview,extra));
+ showWorkspaceTab(workspaceTab,w,overview,extra);
+};
+async function showWorkspaceTab(tab,w,overview,extra){
+ workspaceTab=tab;
+ document.querySelectorAll('[data-wtab]').forEach(b=>{b.classList.toggle('primary',b.dataset.wtab===tab)});
+ overview.hidden=tab!=='overview';extra.innerHTML='';
+ if(tab==='overview')return;
+ if(tab==='projects'){
+ extra.innerHTML='<div class="panel"><h3>Projects</h3><p class="sub">Plan and track larger group assignments.</p><div class="field"><label>Project name</label><input id="wProjectTitle" maxlength="160" placeholder="e.g. Semester project"></div><div class="field"><label>Description</label><textarea id="wProjectDesc" maxlength="5000" placeholder="Goal, scope, deliverables"></textarea></div><div class="formgrid"><div class="field"><label>Due date</label><input id="wProjectDue" type="date"></div><div class="field"><label>Status</label><select id="wProjectStatus"><option value="planned">Planned</option><option value="active" selected>Active</option><option value="completed">Completed</option><option value="archived">Archived</option></select></div></div><button class="btn primary" id="wProjectAdd">＋ Create project</button><div class="task-list" id="wProjectsList" style="margin-top:14px">Loading…</div></div>';
+ try{const {data,error}=await supa.from('uniplanner_projects').select('id,title,description,status,due_date,created_at').eq('workspace_id',w.id).order('created_at',{ascending:false});if(error)throw error;const box=$('wProjectsList');box.innerHTML=(data||[]).length?data.map(p=>'<div class="task"><div class="task-main"><div class="task-title">'+esc(p.title)+'</div><div class="task-meta"><span class="tag">'+esc(p.status)+'</span>'+(p.due_date?' · Due '+esc(p.due_date):'')+'</div>'+(p.description?'<div class="sub">'+esc(p.description)+'</div>':'')+'</div><button class="mini" data-wproject-delete="'+esc(p.id)+'">✕</button></div>').join(''):'<div class="empty">No projects yet. Add the first one above.</div>';
+ box.querySelectorAll('[data-wproject-delete]').forEach(b=>b.onclick=async()=>{if(!confirm('Delete this workspace project?'))return;const {error}=await supa.from('uniplanner_projects').delete().eq('id',b.dataset.wprojectDelete).eq('workspace_id',w.id);if(error)toast(error.message,'error');else showWorkspaceTab('projects',w,overview,extra)});
+ $('wProjectAdd').onclick=async()=>{const title=$('wProjectTitle').value.trim();if(!title){toast('Enter a project name.','error');return}const {error}=await supa.from('uniplanner_projects').insert({workspace_id:w.id,title,description:$('wProjectDesc').value.trim(),due_date:$('wProjectDue').value||null,status:$('wProjectStatus').value,created_by:user.id});if(error)toast(error.message,'error');else{toast('Project created.');showWorkspaceTab('projects',w,overview,extra)}};
+ }catch(e){$('wProjectsList').innerHTML='<div class="empty">Projects need the collaboration migration on the connected database: '+esc(e.message)+'</div>'}
+ }else if(tab==='resources'){
+ extra.innerHTML='<div class="panel"><h3>Notes &amp; resources</h3><p class="sub">A shared library for course links and reference material.</p><div class="field"><label>Resource title</label><input id="wResourceTitle" maxlength="180" placeholder="e.g. Lecture slides"></div><div class="field"><label>Description</label><textarea id="wResourceDesc" maxlength="3000" placeholder="What is this useful for?"></textarea></div><div class="field"><label>Link (optional)</label><input id="wResourceUrl" type="url" maxlength="2048" placeholder="https://…"></div><div class="field"><label>Type</label><select id="wResourceType"><option value="link">Link</option><option value="document">Document</option><option value="file_reference">File reference</option><option value="reference">Reference</option></select></div><button class="btn primary" id="wResourceAdd">＋ Add resource</button><div class="task-list" id="wResourcesList" style="margin-top:14px">Loading…</div></div>';
+ try{const {data,error}=await supa.from('uniplanner_workspace_resources').select('id,title,description,resource_url,resource_type,created_at').eq('workspace_id',w.id).order('created_at',{ascending:false});if(error)throw error;const box=$('wResourcesList');box.innerHTML=(data||[]).length?data.map(r=>'<div class="task"><div class="task-main"><div class="task-title">'+esc(r.title)+'</div><div class="task-meta">'+esc(r.resource_type.replace('_',' '))+' · '+esc(new Date(r.created_at).toLocaleDateString())+'</div>'+(r.description?'<div class="sub">'+esc(r.description)+'</div>':'')+(r.resource_url&&/^https?:\/\//i.test(r.resource_url)?'<div class="sub"><a href="'+esc(r.resource_url)+'" target="_blank" rel="noopener noreferrer">Open resource ↗</a></div>':'')+'</div><button class="mini" data-wresource-delete="'+esc(r.id)+'">✕</button></div>').join(''):'<div class="empty">No resources yet. Add a useful link or reference.</div>';
+ box.querySelectorAll('[data-wresource-delete]').forEach(b=>b.onclick=async()=>{if(!confirm('Remove this resource?'))return;const {error}=await supa.from('uniplanner_workspace_resources').delete().eq('id',b.dataset.wresourceDelete).eq('workspace_id',w.id);if(error)toast(error.message,'error');else showWorkspaceTab('resources',w,overview,extra)});
+ $('wResourceAdd').onclick=async()=>{const title=$('wResourceTitle').value.trim(),url=$('wResourceUrl').value.trim();if(!title){toast('Enter a resource title.','error');return}if(url&&!/^https?:\/\//i.test(url)){toast('Use an http or https link.','error');return}const {error}=await supa.from('uniplanner_workspace_resources').insert({workspace_id:w.id,title,description:$('wResourceDesc').value.trim(),resource_url:url||null,resource_type:$('wResourceType').value,created_by:user.id});if(error)toast(error.message,'error');else{toast('Resource added.');showWorkspaceTab('resources',w,overview,extra)}};
+ }catch(e){$('wResourcesList').innerHTML='<div class="empty">Resources need the collaboration migration on the connected database: '+esc(e.message)+'</div>'}
+ }else if(tab==='requests'){
+ extra.innerHTML='<div class="panel"><h3>Join requests</h3><p class="sub">See access requests for this workspace. Membership is not granted until an owner approves through a secure server-side action.</p><div id="wJoinRequestsList" class="task-list" style="margin-top:14px">Loading requests…</div></div>';
+ try{const [{data:rows,error},{data:mine,error:me}]=await Promise.all([supa.from('uniplanner_workspace_join_requests').select('id,user_id,message,status,created_at').eq('workspace_id',w.id).order('created_at',{ascending:false}).limit(100),supa.from('uniplanner_workspace_members').select('role').eq('workspace_id',w.id).eq('user_id',user.id).maybeSingle()]);if(error)throw error;if(me)throw me;const isOwner=mine?.role==='owner';const box=$('wJoinRequestsList');box.innerHTML=(rows||[]).length?rows.map(r=>'<div class="task"><div class="task-main"><div class="task-title">'+(r.user_id===user.id?'Your join request':'Join request')+'</div><div class="task-meta"><span class="tag">'+esc(r.status)+'</span> · '+esc(new Date(r.created_at).toLocaleString())+'</div>'+(r.message?'<div class="sub">'+esc(r.message)+'</div>':'')+'</div>'+(isOwner&&r.status==='pending'?'<button class="btn primary" data-join-approve="'+esc(r.id)+'">Approve</button><button class="btn" data-join-reject="'+esc(r.id)+'">Reject</button>':'')+'</div>').join(''):'<div class="empty">No join requests yet.</div>';box.querySelectorAll('[data-join-approve],[data-join-reject]').forEach(b=>b.onclick=async()=>{const decision=b.hasAttribute('data-join-approve')?'approve':'reject',id=b.getAttribute('data-join-approve')||b.getAttribute('data-join-reject');const {error}=await supa.rpc('uniplanner_review_workspace_join_request',{p_request_id:id,p_decision:decision});if(error){toast('Could not review request: '+error.message,'error');return}toast(decision==='approve'?'Classmate approved and added.':'Request rejected.');showWorkspaceTab('requests',w,overview,extra);});
+ }catch(e){$('wJoinRequestsList').innerHTML='<div class="empty">Join requests need the collaboration migration on the connected database: '+esc(e.message)+'</div>'}
+ }else if(tab==='settings'){
+ extra.innerHTML='<div class="panel"><h3>Workspace settings</h3><div class="field"><label>Workspace type</label><select id="wType"><option value="study_group">Study group</option><option value="course">Course workspace</option></select></div><div class="field"><label>Visibility</label><select id="wVisibility"><option value="private">Private</option><option value="discoverable">Discoverable</option></select></div><div class="field"><label>Joining</label><select id="wJoinMode"><option value="invite_only">Invite only</option><option value="request_to_join">Request to join</option></select></div><button class="btn primary" id="wSettingsSave">Save settings</button><p class="sub">Changing discovery settings never grants membership by itself.</p></div>';
+ try{const {data,error}=await supa.from('uniplanner_workspaces').select('workspace_type,visibility,join_mode').eq('id',w.id).single();if(error)throw error;$('wType').value=data.workspace_type||'study_group';$('wVisibility').value=data.visibility||'private';$('wJoinMode').value=data.join_mode||'invite_only';const {data:members,error:me}=await supa.from('uniplanner_workspace_members').select('user_id,role').eq('workspace_id',w.id);if(me)throw me;if((members||[]).find(m=>m.user_id===user.id)?.role!=='owner'){$('wSettingsSave').disabled=true;toast('Only the workspace owner can change settings.','error')}else $('wSettingsSave').onclick=async()=>{const {error}=await supa.from('uniplanner_workspaces').update({workspace_type:$('wType').value,visibility:$('wVisibility').value,join_mode:$('wJoinMode').value}).eq('id',w.id);if(error)toast('Could not save settings: '+error.message,'error');else toast('Workspace settings saved.')};
+ }catch(e){extra.innerHTML='<div class="panel"><h3>Workspace settings</h3><div class="empty">Settings need the collaboration migration on the connected database: '+esc(e.message)+'</div></div>'}
+ }
+}
+
+
+/* Workspace hub navigation: split existing collaboration tools into focused sections. */
+let workspaceHubSections = null;
+const showWorkspaceTabBeforeHub = showWorkspaceTab;
+const loadWorkspaceTasksBeforeHub = loadWorkspaceTasks;
+
+async function loadWorkspaceHubMembers(w) {
+  const sections = workspaceHubSections;
+  const box = sections && sections.membersList;
+  if (!box || sections.workspaceId !== w.id || !supa || !user) return;
+  box.innerHTML = '<div class="empty">Loading workspace members…</div>';
+  try {
+    const { data: members, error } = await supa.from('uniplanner_workspace_members')
+      .select('user_id,role,joined_at')
+      .eq('workspace_id', w.id)
+      .order('joined_at', { ascending: true });
+    if (error) throw error;
+    if (!workspaceHubSections || workspaceHubSections.workspaceId !== w.id) return;
+    const profiles = await loadWorkspaceProfiles((members || []).map(m => m.user_id));
+    if (!workspaceHubSections || workspaceHubSections.workspaceId !== w.id) return;
+    const myMembership = (members || []).find(m => m.user_id === user.id);
+    const canManage = myMembership?.role === 'owner';
+    box.innerHTML = (members || []).length ? members.map(m => {
+      const display = profiles.get(m.user_id) || (m.user_id === user.id ? prefs.displayName : '') || 'Member';
+      const joined = m.joined_at ? new Date(m.joined_at).toLocaleDateString() : '';
+      const isSelf = m.user_id === user.id;
+      const canRemove = canManage && !isSelf && m.role !== 'owner';
+      return '<div class="task workspace-member-row"><div class="task-main"><div class="task-title">' +
+        esc(display) + (isSelf ? ' (you)' : '') +
+        '</div><div class="task-meta"><span class="tag">' + esc(m.role) +
+        '</span>' + (joined ? '<span>Joined ' + esc(joined) + '</span>' : '') +
+        '</div></div>' + (canRemove ? '<button class="btn" type="button" data-hub-remove-member="' +
+        esc(m.user_id) + '">Remove</button>' : '') + '</div>';
+    }).join('') : '<div class="empty">No members found for this workspace.</div>';
+    box.querySelectorAll('[data-hub-remove-member]').forEach(button => {
+      button.onclick = async () => {
+        const target = button.dataset.hubRemoveMember;
+        const label = profiles.get(target) || 'this member';
+        if (!confirm('Remove ' + label + ' from this workspace? Their personal planner data will not be affected.')) return;
+        button.disabled = true;
+        try {
+          const { error } = await supa.from('uniplanner_workspace_members')
+            .delete().eq('workspace_id', w.id).eq('user_id', target).neq('role', 'owner');
+          if (error) throw error;
+          toast('Member removed from the workspace.');
+          await loadWorkspaceTasks();
+        } catch (e) {
+          toast('Could not remove member: ' + (e.message || 'Unknown error'), 'error');
+          button.disabled = false;
+        }
+      };
+    });
+  } catch (e) {
+    box.innerHTML = '<div class="empty">Could not load members: ' + esc(e.message || 'Unknown error') + '</div>';
+  }
+}
+
+showWorkspaceTab = async function(tab, w, overview, extra) {
+  const sections = workspaceHubSections;
+  if (!sections || sections.workspaceId !== w.id) {
+    return showWorkspaceTabBeforeHub(tab, w, overview, extra);
+  }
+  if (['tasks', 'discussion', 'chat', 'members'].includes(tab)) {
+    workspaceTab = tab;
+    document.querySelectorAll('#workspaceContent .workspace-tabs [data-wtab]').forEach(button => {
+      button.classList.toggle('primary', button.dataset.wtab === tab);
+    });
+    overview.hidden = true;
+    extra.replaceChildren();
+    if (sections[tab]) extra.appendChild(sections[tab]);
+    if (tab === 'members') await loadWorkspaceHubMembers(w);
+    return;
+  }
+  if (tab === 'resources') {
+    await showWorkspaceTabBeforeHub(tab, w, overview, extra);
+    if (sections.notes) extra.appendChild(sections.notes);
+    return;
+  }
+  return showWorkspaceTabBeforeHub(tab, w, overview, extra);
+};
+
+loadWorkspaceTasks = async function() {
+  workspaceHubSections = null;
+  await loadWorkspaceTasksBeforeHub();
+  const root = $('workspaceContent');
+  const w = workspaces.find(item => item.id === activeWorkspaceId);
+  if (!root || !w || !supa || !user) return;
+  const overview = root.querySelector('#workspaceOverviewTab');
+  const tabs = root.querySelector('.workspace-tabs');
+  const extra = root.querySelector('#workspaceExtraTab');
+  if (!overview || !tabs || !extra || tabs.dataset.hubVersion === '2') return;
+
+  const makePanel = (heading, description) => {
+    const panel = document.createElement('section');
+    panel.className = 'panel workspace-section';
+    const title = document.createElement('h3');
+    title.textContent = heading;
+    const sub = document.createElement('p');
+    sub.className = 'sub';
+    sub.textContent = description;
+    panel.append(title, sub);
+    return panel;
+  };
+  const move = (node, panel) => { if (node) panel.appendChild(node); };
+  const tasksPanel = makePanel('Shared tasks', 'Create, assign and track the work your group needs to finish.');
+  const taskList = overview.querySelector('#sharedTaskList');
+  const taskListHeading = taskList?.previousElementSibling;
+  [
+    overview.querySelector('#sharedTitle')?.closest('.field'),
+    overview.querySelector('#sharedDate')?.closest('.formgrid'),
+    overview.querySelector('#sharedCategory')?.closest('.formgrid'),
+    overview.querySelector('#sharedAssignee')?.closest('.field'),
+    overview.querySelector('#createSharedTaskBtn'),
+    taskListHeading,
+    taskList
+  ].forEach(node => move(node, tasksPanel));
+
+  const membersPanel = makePanel('Workspace members', 'See who is in the group, manage membership and invite classmates.');
+  const inviteField = overview.querySelector('#inviteEmail')?.closest('.field');
+  move(inviteField, membersPanel);
+  const membersList = document.createElement('div');
+  membersList.id = 'workspaceMembersList';
+  membersList.className = 'task-list';
+  membersList.style.marginTop = '14px';
+  membersPanel.appendChild(membersList);
+
+  const notesPanel = overview.querySelector('#teamNoteTitle')?.closest('.panel') || null;
+  const discussionPanel = overview.querySelector('#discussionTask')?.closest('.panel') || null;
+  const chatPanel = overview.querySelector('#groupChatList')?.closest('.panel') || null;
+  const actionBar = overview.querySelector('#leaveWorkspaceBtn')?.parentElement ||
+    overview.querySelector('#deleteWorkspaceBtn')?.parentElement || null;
+  const summary = overview.querySelector('.group-summary');
+  const privacy = overview.querySelector('.small-label');
+
+  const intro = document.createElement('div');
+  intro.className = 'panel workspace-hub-intro';
+  const introTitle = document.createElement('h3');
+  introTitle.textContent = w.name;
+  const introText = document.createElement('p');
+  introText.textContent = 'Your group’s shared home. Keep deadlines, projects, notes and conversations together.';
+  intro.append(introTitle, introText);
+  const quick = document.createElement('div');
+  quick.className = 'workspace-quick-grid';
+  [
+    ['tasks', 'Shared tasks', 'Plan and assign group work'],
+    ['assignments', 'Assignments', 'Share instructions and submissions'],
+    ['projects', 'Projects', 'Track larger assignments'],
+    ['resources', 'Notes & resources', 'Build a shared study library'],
+    ['chat', 'Group chat', 'Keep everyone in the loop'],
+    ['members', 'Members', 'Manage your classmates']
+  ].forEach(([tab, title, detail]) => {
+    const button = document.createElement('button');
+    button.type = 'button';
+    button.className = 'workspace-quick-card';
+    button.dataset.wtab = tab;
+    const strong = document.createElement('strong');
+    strong.textContent = title;
+    const span = document.createElement('span');
+    span.textContent = detail;
+    button.append(strong, span);
+    button.onclick = () => showWorkspaceTab(tab, w, overview, extra);
+    quick.appendChild(button);
+  });
+  intro.appendChild(quick);
+  overview.replaceChildren(intro);
+  if (actionBar) overview.appendChild(actionBar);
+  if (summary) overview.appendChild(summary);
+  if (privacy) overview.appendChild(privacy);
+
+  tabs.dataset.hubVersion = '2';
+  tabs.innerHTML = '<button class="btn" type="button" data-wtab="overview">Overview</button>' +
+    '<button class="btn" type="button" data-wtab="tasks">Tasks</button>' +
+    '<button class="btn" type="button" data-wtab="assignments">Assignments</button>' +
+    '<button class="btn" type="button" data-wtab="projects">Projects</button>' +
+    '<button class="btn" type="button" data-wtab="resources">Notes &amp; resources</button>' +
+    '<button class="btn" type="button" data-wtab="discussion">Task discussion</button>' +
+    '<button class="btn" type="button" data-wtab="chat">Group chat</button>' +
+    '<button class="btn" type="button" data-wtab="members">Members</button>' +
+    '<button class="btn" type="button" data-wtab="requests">Join requests</button>' +
+    '<button class="btn" type="button" data-wtab="settings">Settings</button>';
+  tabs.querySelectorAll('[data-wtab]').forEach(button => {
+    button.onclick = () => showWorkspaceTab(button.dataset.wtab, w, overview, extra);
+  });
+  workspaceHubSections = { workspaceId: w.id, tasks: tasksPanel, notes: notesPanel, discussion: discussionPanel, chat: chatPanel, members: membersPanel, membersList };
+  await showWorkspaceTab(workspaceTab, w, overview, extra);
+};
+
+/* Project-linked tasks: a single shared-task record can belong to one project. */
+const showWorkspaceTabBeforeProjectTasks = showWorkspaceTab;
+let projectTasksRequest = 0;
+
+async function renderWorkspaceProjectTasks(workspace, project, extra) {
+  const request = ++projectTasksRequest;
+  let panel = $('wProjectTasksPanel');
+  if (!panel) {
+    panel = document.createElement('section');
+    panel.id = 'wProjectTasksPanel';
+    panel.className = 'panel workspace-project-tasks';
+    panel.style.marginTop = '14px';
+    extra.appendChild(panel);
+  }
+  panel.innerHTML = '<h3>' + esc(project.title) + ' · tasks</h3><p class="sub">Tasks linked to this project stay as normal shared workspace tasks—never duplicate records.</p><div class="sub">Loading project tasks…</div>';
+
+  try {
+    const [tasksResult, membersResult] = await Promise.all([
+      supa.from('uniplanner_shared_tasks')
+        .select('id,title,description,due_date,completed,assigned_to,created_by,created_at')
+        .eq('workspace_id', workspace.id)
+        .eq('project_id', project.id)
+        .order('due_date', { ascending: true })
+        .order('created_at', { ascending: true }),
+      supa.from('uniplanner_workspace_members')
+        .select('user_id,role')
+        .eq('workspace_id', workspace.id)
+        .order('joined_at', { ascending: true })
+    ]);
+    if (tasksResult.error) throw tasksResult.error;
+    if (membersResult.error) throw membersResult.error;
+    if (request !== projectTasksRequest || $('wProjectTasksPanel') !== panel) return;
+
+    const members = membersResult.data || [];
+    const profiles = await loadWorkspaceProfiles(members.map(member => member.user_id));
+    if (request !== projectTasksRequest || $('wProjectTasksPanel') !== panel) return;
+    const myRole = members.find(member => member.user_id === user.id)?.role || 'member';
+    const isOwner = myRole === 'owner';
+    const nameFor = id => id ? (profiles.get(id) || (id === user.id ? prefs.displayName : '') || 'Member') : 'Unassigned';
+    const tasks = tasksResult.data || [];
+
+    panel.innerHTML =
+      '<div class="panel-head"><div><h3>' + esc(project.title) + ' · tasks</h3><p class="sub">One shared task record, visible in the workspace and linked to this project.</p></div>' +
+      '<span class="tag">' + tasks.filter(task => task.completed).length + ' / ' + tasks.length + ' completed</span></div>' +
+      '<div class="workspace-project-task-form">' +
+        '<div class="field"><label for="wProjectTaskTitle">Task title</label><input id="wProjectTaskTitle" maxlength="180" placeholder="What needs to be done?" required></div>' +
+        '<div class="field"><label for="wProjectTaskDescription">Details (optional)</label><textarea id="wProjectTaskDescription" rows="2" maxlength="5000" placeholder="Instructions or context"></textarea></div>' +
+        '<div class="formgrid"><div class="field"><label for="wProjectTaskDue">Due date</label><input id="wProjectTaskDue" type="date" value="' + today() + '" required></div>' +
+        '<div class="field"><label for="wProjectTaskAssignee">Assign to</label><select id="wProjectTaskAssignee"><option value="">Unassigned</option>' +
+          members.map(member => '<option value="' + esc(member.user_id) + '">' + esc(nameFor(member.user_id) + (member.user_id === user.id ? ' (you)' : '')) + '</option>').join('') +
+        '</select></div></div><button class="btn primary" id="wProjectTaskAdd" type="button">＋ Add project task</button></div>' +
+      '<div class="divider"></div><div class="task-list" id="wProjectTaskList">' +
+        (tasks.length ? tasks.map(task =>
+          '<div class="task ' + (task.completed ? 'completed' : '') + '">' +
+            '<input class="check" type="checkbox" data-project-task-complete="' + esc(task.id) + '" ' + (task.completed ? 'checked' : '') + ' aria-label="Complete ' + esc(task.title) + '">' +
+            '<div class="task-main"><div class="task-title">' + esc(task.title) + '</div>' +
+            '<div class="task-meta"><span>Due ' + esc(task.due_date) + '</span><span class="tag">Assigned: ' + esc(nameFor(task.assigned_to)) + '</span>' +
+            '<span class="tag">' + (task.completed ? 'Completed' : 'Open') + '</span></div>' +
+            (task.description ? '<div class="sub">' + esc(task.description) + '</div>' : '') +
+            '</div>' +
+            ((isOwner || task.created_by === user.id) ? '<button class="mini" type="button" data-project-task-delete="' + esc(task.id) + '" aria-label="Delete project task">✕</button>' : '') +
+          '</div>'
+        ).join('') : '<div class="empty">No tasks linked to this project yet. Add the first task above.</div>') +
+      '</div>';
+
+    $('wProjectTaskAdd').onclick = async () => {
+      const title = $('wProjectTaskTitle').value.trim();
+      const dueDate = $('wProjectTaskDue').value;
+      if (!title || !dueDate) {
+        toast('Add a task title and due date.', 'error');
+        return;
+      }
+      const button = $('wProjectTaskAdd');
+      button.disabled = true;
+      try {
+        const { error } = await supa.from('uniplanner_shared_tasks').insert({
+          workspace_id: workspace.id,
+          project_id: project.id,
+          created_by: user.id,
+          title,
+          description: $('wProjectTaskDescription').value.trim(),
+          due_date: dueDate,
+          category: 'Group',
+          priority: 'Medium',
+          assigned_to: $('wProjectTaskAssignee').value || null
+        });
+        if (error) throw error;
+        toast('Project task added.');
+        await renderWorkspaceProjectTasks(workspace, project, extra);
+      } catch (error) {
+        toast('Could not add project task: ' + (error.message || 'Unknown error'), 'error');
+        button.disabled = false;
+      }
+    };
+
+    panel.querySelectorAll('[data-project-task-complete]').forEach(input => {
+      input.onchange = async () => {
+        input.disabled = true;
+        try {
+          const { error } = await supa.from('uniplanner_shared_tasks')
+            .update({ completed: input.checked, updated_at: new Date().toISOString() })
+            .eq('id', input.dataset.projectTaskComplete)
+            .eq('workspace_id', workspace.id)
+            .eq('project_id', project.id);
+          if (error) throw error;
+          await renderWorkspaceProjectTasks(workspace, project, extra);
+        } catch (error) {
+          toast('Could not update project task: ' + (error.message || 'Unknown error'), 'error');
+          input.disabled = false;
+          input.checked = !input.checked;
+        }
+      };
+    });
+
+    panel.querySelectorAll('[data-project-task-delete]').forEach(button => {
+      button.onclick = async () => {
+        if (!confirm('Delete this shared task for the whole workspace?')) return;
+        button.disabled = true;
+        try {
+          const { error } = await supa.from('uniplanner_shared_tasks')
+            .delete()
+            .eq('id', button.dataset.projectTaskDelete)
+            .eq('workspace_id', workspace.id)
+            .eq('project_id', project.id);
+          if (error) throw error;
+          toast('Project task deleted.');
+          await renderWorkspaceProjectTasks(workspace, project, extra);
+        } catch (error) {
+          toast('Could not delete project task: ' + (error.message || 'Unknown error'), 'error');
+          button.disabled = false;
+        }
+      };
+    });
+  } catch (error) {
+    if (request !== projectTasksRequest || $('wProjectTasksPanel') !== panel) return;
+    panel.innerHTML = '<h3>' + esc(project.title) + ' · tasks</h3><div class="empty">Project-linked tasks are not available yet on this database. Confirm the project-task migration is installed in this environment. ' + esc(error.message || '') + '</div>';
+  }
+}
+
+showWorkspaceTab = async function(tab, workspace, overview, extra) {
+  await showWorkspaceTabBeforeProjectTasks(tab, workspace, overview, extra);
+  if (tab !== 'projects' || !workspace || !supa || !user) return;
+
+  const list = $('wProjectsList');
+  if (!list) return;
+  const [projectsResult, membersResult] = await Promise.all([
+    supa.from('uniplanner_projects')
+      .select('id,title,created_by')
+      .eq('workspace_id', workspace.id),
+    supa.from('uniplanner_workspace_members')
+      .select('role')
+      .eq('workspace_id', workspace.id)
+      .eq('user_id', user.id)
+      .maybeSingle()
+  ]);
+  if (projectsResult.error) {
+    toast('Could not prepare project tasks: ' + projectsResult.error.message, 'error');
+    return;
+  }
+  if (membersResult.error) {
+    toast('Could not verify workspace permissions: ' + membersResult.error.message, 'error');
+    return;
+  }
+  const isOwner = membersResult.data?.role === 'owner';
+  const projects = projectsResult.data || [];
+  const projectById = new Map(projects.map(project => [project.id, project]));
+
+  list.querySelectorAll('[data-wproject-delete]').forEach(deleteButton => {
+    const project = projectById.get(deleteButton.dataset.wprojectDelete);
+    if (!project) return;
+    if (!isOwner && project.created_by !== user.id) {
+      deleteButton.remove();
+    } else {
+      deleteButton.onclick = async () => {
+        if (!confirm('Delete "' + project.title + '"? Its shared tasks will remain in the workspace and become unlinked from this project.')) return;
+        deleteButton.disabled = true;
+        try {
+          const { error } = await supa.from('uniplanner_projects')
+            .delete()
+            .eq('id', project.id)
+            .eq('workspace_id', workspace.id);
+          if (error) throw error;
+          toast('Project deleted. Its tasks remain in the workspace.');
+          await showWorkspaceTab('projects', workspace, overview, extra);
+        } catch (error) {
+          toast('Could not delete project: ' + (error.message || 'Unknown error'), 'error');
+          deleteButton.disabled = false;
+        }
+      };
+    }
+
+    const taskButton = document.createElement('button');
+    taskButton.type = 'button';
+    taskButton.className = 'btn';
+    taskButton.textContent = 'View project tasks';
+    taskButton.onclick = () => renderWorkspaceProjectTasks(workspace, project, extra);
+    const main = deleteButton.closest('.task')?.querySelector('.task-main');
+    if (main) main.appendChild(taskButton);
+  });
+};
+
+/* Keep the personal task inbox current whenever shared workspace data is reloaded. */
+const loadWorkspaceTasksBeforeAssignedInbox=loadWorkspaceTasks;
+loadWorkspaceTasks=async function(){
+ await loadWorkspaceTasksBeforeAssignedInbox();
+ await renderAssignedWorkspaceTasks();
+};
+
+
+/* Workspace assignments and private file storage. */
+const showWorkspaceTabBeforeAssignments = showWorkspaceTab;
+const ASSIGNMENT_FILE_BUCKET = 'uniplanner-workspace-files';
+const ASSIGNMENT_FILE_LIMIT = 20 * 1024 * 1024;
+const ASSIGNMENT_ALLOWED_MIMES = new Set([
+  'application/pdf',
+  'application/msword',
+  'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
+  'application/vnd.ms-powerpoint',
+  'application/vnd.openxmlformats-officedocument.presentationml.presentation',
+  'application/vnd.ms-excel',
+  'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
+  'text/plain',
+  'text/csv',
+  'application/json',
+  'application/zip',
+  'application/x-zip-compressed',
+  'image/png',
+  'image/jpeg'
+]);
+const ASSIGNMENT_EXTENSION_MIMES = {
+  pdf:'application/pdf',
+  doc:'application/msword',
+  docx:'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
+  ppt:'application/vnd.ms-powerpoint',
+  pptx:'application/vnd.openxmlformats-officedocument.presentationml.presentation',
+  xls:'application/vnd.ms-excel',
+  xlsx:'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
+  txt:'text/plain',
+  csv:'text/csv',
+  json:'application/json',
+  zip:'application/zip',
+  png:'image/png',
+  jpg:'image/jpeg',
+  jpeg:'image/jpeg'
+};
+let workspaceAssignmentsRequest = 0;
+
+let workspaceStorageCleanupPromise = null;
+
+async function drainWorkspaceStorageCleanupJobs(){
+  if(!supa||!user||!user.id)return {completed:0,failed:0,total:0,skipped:true};
+  if(workspaceStorageCleanupPromise)return workspaceStorageCleanupPromise;
+
+  const run=(async()=>{
+    const pending=[];
+    const cleanupPageSize=100;
+    const cleanupJobLimit=1000;
+
+    /* Read every page before deleting any queue rows. That keeps range-based
+       pagination stable even while successful jobs are removed below. */
+    for(let offset=0;offset<cleanupJobLimit;offset+=cleanupPageSize){
+      const {data:page,error:jobsError}=await supa
+        .from('uniplanner_workspace_storage_cleanup_jobs')
+        .select('id,workspace_id')
+        .order('created_at',{ascending:true})
+        .range(offset,offset+cleanupPageSize-1);
+
+      if(jobsError){
+        const message=String(jobsError.message||'');
+        const queueNotInstalled=jobsError.code==='42P01'||jobsError.code==='PGRST205'||
+          /could not find the table|relation .* does not exist/i.test(message);
+        if(queueNotInstalled&&offset===0)return {completed:0,failed:0,total:0,skipped:true};
+        throw jobsError;
+      }
+
+      const batch=page||[];
+      pending.push(...batch);
+      if(batch.length<cleanupPageSize)break;
+    }
+
+    if(!pending.length)return {completed:0,failed:0,total:0};
+    const bucket=supa.storage.from(ASSIGNMENT_FILE_BUCKET);
+    let completed=0,failed=0,removedTotal=0;
+
+    for(const job of pending){
+      try{
+        const workspaceId=String(job.workspace_id||'');
+        if(!/^[0-9a-f-]{36}$/i.test(workspaceId))throw new Error('A cleanup job contains an invalid workspace ID.');
+
+        const visitedFolders=new Set();
+        const filePaths=[];
+        async function collectFiles(prefix){
+          if(visitedFolders.has(prefix))return;
+          visitedFolders.add(prefix);
+
+          for(let offset=0;;offset+=100){
+            const {data:entries,error:listError}=await bucket.list(prefix,{
+              limit:100,
+              offset,
+              sortBy:{column:'name',order:'asc'}
+            });
+            if(listError)throw listError;
+            const page=entries||[];
+
+            for(const entry of page){
+              if(!entry||typeof entry.name!=='string'||!entry.name)continue;
+              if(entry.name.includes('/')||entry.name.includes('\\'))throw new Error('Storage returned an unexpected folder entry.');
+              const fullPath=prefix+'/'+entry.name;
+
+              if(entry.id==null){
+                await collectFiles(fullPath);
+                continue;
+              }
+
+              const relative=fullPath.slice(workspaceId.length+1).split('/');
+              const isResource=relative.length===3&&relative[1]==='resources';
+              const isSubmission=relative.length===4&&relative[1]==='submissions';
+              if(!isResource&&!isSubmission)throw new Error('A file under this workspace has an unexpected path; the cleanup job was kept for review.');
+              filePaths.push(fullPath);
+              if(filePaths.length>200000)throw new Error('This workspace exceeds the safe automatic cleanup limit.');
+            }
+
+            if(page.length<100)break;
+          }
+        }
+
+        await collectFiles(workspaceId);
+        for(let offset=0;offset<filePaths.length;offset+=1000){
+          const {error:removeError}=await bucket.remove(filePaths.slice(offset,offset+1000));
+          if(removeError)throw removeError;
+          removedTotal+=Math.min(1000,filePaths.length-offset);
+        }
+
+        const {error:jobDeleteError}=await supa
+          .from('uniplanner_workspace_storage_cleanup_jobs')
+          .delete()
+          .eq('id',job.id)
+          .select('id');
+        if(jobDeleteError)throw jobDeleteError;
+        completed++;
+        console.info('UniPlanner storage cleanup completed',workspaceId,filePaths.length);
+      }catch(error){
+        failed++;
+        console.warn('UniPlanner storage cleanup remains queued',job.workspace_id,error);
+      }
+    }
+
+    return {completed,failed,total:pending.length,removed:removedTotal};
+  })();
+
+  workspaceStorageCleanupPromise=run;
+  try{return await run;}
+  finally{if(workspaceStorageCleanupPromise===run)workspaceStorageCleanupPromise=null;}
+}
+
+/* Resume queued cleanup after sign-in and whenever the workspace list is opened.
+   A cleanup failure never blocks access to the remaining workspace features. */
+const loadWorkspacesBeforeStorageCleanup=loadWorkspaces;
+loadWorkspaces=async function(...args){
+  if(supa&&user){
+    try{
+      const cleanup=await drainWorkspaceStorageCleanupJobs();
+      if(cleanup.failed){
+        toast('A deleted workspace still has stored files queued for cleanup. UniPlanner will retry when you open Shared Study Workspaces again.','error');
+      }else if(cleanup.completed){
+        toast('Stored files from a deleted workspace were cleaned up.');
+      }
+    }catch(error){
+      console.warn('UniPlanner could not process queued storage cleanup jobs',error);
+      toast('Stored-file cleanup could not finish yet. The cleanup job remains queued for another attempt.','error');
+    }
+  }
+  return loadWorkspacesBeforeStorageCleanup(...args);
+};
+
+function assignmentFileMime(file){
+  const ext = String(file.name.split('.').pop() || '').toLowerCase();
+  const reported = file.type || '';
+  const mime = ASSIGNMENT_ALLOWED_MIMES.has(reported) ? reported : (ASSIGNMENT_EXTENSION_MIMES[ext] || '');
+  return ASSIGNMENT_ALLOWED_MIMES.has(mime) ? mime : '';
+}
+
+function assignmentFileExtension(file){
+  const ext = String(file.name.split('.').pop() || '').toLowerCase().replace(/[^a-z0-9]/g,'').slice(0,10);
+  return ext || 'file';
+}
+
+function assignmentFileSize(size){
+  return size < 1024 * 1024
+    ? Math.max(1,Math.round(size/1024)) + ' KB'
+    : (size/(1024*1024)).toFixed(1) + ' MB';
+}
+
+function assignmentDownload(path, fileName){
+  return (async()=>{
+    try{
+      const {data,error}=await supa.storage.from(ASSIGNMENT_FILE_BUCKET).download(path);
+      if(error)throw error;
+      const url=URL.createObjectURL(data);
+      const link=document.createElement('a');
+      link.href=url;
+      link.download=fileName || 'assignment-file';
+      document.body.appendChild(link);
+      link.click();
+      link.remove();
+      window.setTimeout(()=>URL.revokeObjectURL(url),30000);
+    }catch(error){
+      toast('Could not download file: '+(error.message||'Unknown error'),'error');
+    }
+  })();
+}
+
+async function renderWorkspaceAssignments(w,overview,extra){
+  const request=++workspaceAssignmentsRequest;
+  workspaceTab='assignments';
+  document.querySelectorAll('#workspaceContent .workspace-tabs [data-wtab]').forEach(button=>{
+    button.classList.toggle('primary',button.dataset.wtab==='assignments');
+  });
+  overview.hidden=true;
+  extra.replaceChildren();
+
+  const panel=document.createElement('section');
+  panel.id='workspaceAssignmentsPanel';
+  panel.className='panel workspace-assignments-panel';
+  panel.innerHTML=
+    '<div class="panel-head"><div><h3>Assignments</h3><p class="sub">Instructions, original files and individual submissions. Every workspace member can view and download submissions.</p></div><span class="tag">Private files</span></div>'+
+    '<div class="workspace-assignment-create">'+
+      '<div class="field"><label for="workspaceAssignmentTitle">Assignment title</label><input id="workspaceAssignmentTitle" maxlength="160" placeholder="e.g. Programming Fundamentals — Assignment 2"></div>'+
+      '<div class="field"><label for="workspaceAssignmentInstructions">Instructions</label><textarea id="workspaceAssignmentInstructions" rows="3" maxlength="10000" placeholder="Describe the requirements, deliverables and submission details…"></textarea></div>'+
+      '<div class="formgrid"><div class="field"><label for="workspaceAssignmentDue">Due date and time (optional)</label><input id="workspaceAssignmentDue" type="datetime-local"></div><div class="field"><label for="workspaceAssignmentProject">Linked project (optional)</label><select id="workspaceAssignmentProject"><option value="">No project</option></select></div></div>'+
+      '<button class="btn primary" id="workspaceAssignmentCreate" type="button">＋ Create assignment</button>'+
+    '</div>'+
+    '<div class="divider"></div>'+
+    '<div class="task-list" id="workspaceAssignmentsList"><div class="empty">Loading assignments…</div></div>';
+  extra.appendChild(panel);
+
+  try{
+    const [assignmentsResult,resourcesResult,submissionsResult,membersResult,projectsResult]=await Promise.all([
+      supa.from('uniplanner_assignments')
+        .select('id,workspace_id,project_id,created_by,title,instructions,due_at,status,created_at,updated_at')
+        .eq('workspace_id',w.id)
+        .order('created_at',{ascending:false}),
+      supa.from('uniplanner_assignment_resources')
+        .select('id,workspace_id,assignment_id,uploaded_by,storage_path,original_file_name,mime_type,file_size_bytes,created_at')
+        .eq('workspace_id',w.id)
+        .order('created_at',{ascending:false}),
+      supa.from('uniplanner_assignment_submissions')
+        .select('id,workspace_id,assignment_id,submitted_by,storage_path,original_file_name,mime_type,file_size_bytes,note,submitted_at')
+        .eq('workspace_id',w.id)
+        .order('submitted_at',{ascending:false}),
+      supa.from('uniplanner_workspace_members')
+        .select('user_id,role')
+        .eq('workspace_id',w.id),
+      supa.from('uniplanner_projects')
+        .select('id,title')
+        .eq('workspace_id',w.id)
+        .order('created_at',{ascending:false})
+    ]);
+    for(const result of [assignmentsResult,resourcesResult,submissionsResult,membersResult,projectsResult]){
+      if(result.error)throw result.error;
+    }
+    if(request!==workspaceAssignmentsRequest || !panel.isConnected)return;
+
+    const assignments=assignmentsResult.data||[];
+    const resources=resourcesResult.data||[];
+    const submissions=submissionsResult.data||[];
+    const members=membersResult.data||[];
+    const projects=projectsResult.data||[];
+    const myRole=members.find(member=>member.user_id===user.id)?.role||'member';
+    const isWorkspaceOwner=myRole==='owner';
+    const profiles=await loadWorkspaceProfiles([
+      ...members.map(member=>member.user_id),
+      ...assignments.map(assignment=>assignment.created_by),
+      ...resources.map(resource=>resource.uploaded_by),
+      ...submissions.map(submission=>submission.submitted_by)
+    ]);
+    if(request!==workspaceAssignmentsRequest || !panel.isConnected)return;
+    const nameFor=id=>profiles.get(id)||(id===user.id?prefs.displayName:'')||'Member';
+    const projectById=new Map(projects.map(project=>[project.id,project]));
+    const projectSelect=$('workspaceAssignmentProject');
+    if(projectSelect){
+      projectSelect.innerHTML='<option value="">No project</option>'+projects.map(project=>'<option value="'+esc(project.id)+'">'+esc(project.title)+'</option>').join('');
+    }
+
+    const resourcesByAssignment=new Map();
+    resources.forEach(resource=>{
+      const group=resourcesByAssignment.get(resource.assignment_id)||[];
+      group.push(resource);
+      resourcesByAssignment.set(resource.assignment_id,group);
+    });
+    const submissionsByAssignment=new Map();
+    submissions.forEach(submission=>{
+      const group=submissionsByAssignment.get(submission.assignment_id)||[];
+      group.push(submission);
+      submissionsByAssignment.set(submission.assignment_id,group);
+    });
+    const versions=new Map();
+    [...submissions].sort((a,b)=>String(a.submitted_at).localeCompare(String(b.submitted_at))).forEach(submission=>{
+      const key=submission.assignment_id+':'+submission.submitted_by;
+      versions.set(submission.id,(versions.get(key)||0)+1);
+      versions.set(key,versions.get(key));
+    });
+
+    const list=$('workspaceAssignmentsList');
+    list.innerHTML=assignments.length?assignments.map(assignment=>{
+      const assignmentResources=resourcesByAssignment.get(assignment.id)||[];
+      const assignmentSubmissions=submissionsByAssignment.get(assignment.id)||[];
+      const canManage=isWorkspaceOwner||assignment.created_by===user.id;
+      const due=assignment.due_at?new Date(assignment.due_at).toLocaleString():'No due date';
+      const project=assignment.project_id?projectById.get(assignment.project_id)?.title||'Linked project':'';
+      const resourceHtml=assignmentResources.length?assignmentResources.map(resource=>
+        '<div class="assignment-file-row"><div><strong>'+esc(resource.original_file_name)+'</strong><span>'+esc(assignmentFileSize(Number(resource.file_size_bytes)))+' · '+esc(nameFor(resource.uploaded_by))+' · '+esc(new Date(resource.created_at).toLocaleDateString())+'</span></div><div class="row"><button class="btn" type="button" data-assignment-download="'+esc(resource.id)+'" data-file-path="'+esc(resource.storage_path)+'" data-file-name="'+esc(resource.original_file_name)+'">Download</button>'+((resource.uploaded_by===user.id||canManage)?'<button class="mini" type="button" data-assignment-remove-resource="'+esc(resource.id)+'" data-file-path="'+esc(resource.storage_path)+'" aria-label="Remove assignment resource">✕</button>':'')+'</div></div>'
+      ).join(''):'<div class="empty assignment-inline-empty">No original files attached yet.</div>';
+      const submissionHtml=assignmentSubmissions.length?assignmentSubmissions.map(submission=>
+        '<div class="assignment-file-row"><div><strong>'+esc(submission.original_file_name)+'</strong><span>'+esc(nameFor(submission.submitted_by))+' · Version '+esc(versions.get(submission.id)||1)+' · '+esc(new Date(submission.submitted_at).toLocaleString())+' · '+esc(assignmentFileSize(Number(submission.file_size_bytes)))+'</span>'+(submission.note?'<small>'+esc(submission.note)+'</small>':'')+'</div><div class="row"><button class="btn" type="button" data-assignment-download="'+esc(submission.id)+'" data-file-path="'+esc(submission.storage_path)+'" data-file-name="'+esc(submission.original_file_name)+'">Download</button>'+(submission.submitted_by===user.id?'<button class="mini" type="button" data-assignment-remove-submission="'+esc(submission.id)+'" data-file-path="'+esc(submission.storage_path)+'" aria-label="Remove your submission">✕</button>':'')+'</div></div>'
+      ).join(''):'<div class="empty assignment-inline-empty">No submissions yet. Be the first to submit.</div>';
+      return '<article class="workspace-assignment-card" data-assignment-card="'+esc(assignment.id)+'">'+
+        '<div class="workspace-assignment-heading"><div><div class="row"><span class="tag">'+esc(assignment.status)+'</span>'+(project?'<span class="tag">'+esc(project)+'</span>':'')+'</div><h4>'+esc(assignment.title)+'</h4><p class="sub">Due: '+esc(due)+' · Created by '+esc(nameFor(assignment.created_by))+'</p></div>'+
+        (canManage?'<button class="btn" type="button" data-assignment-toggle="'+esc(assignment.id)+'" data-next-status="'+(assignment.status==='open'?'closed':'open')+'">'+(assignment.status==='open'?'Close submissions':'Reopen submissions')+'</button>':'')+
+        '</div>'+
+        (assignment.instructions?'<p class="assignment-instructions">'+esc(assignment.instructions)+'</p>':'')+
+        '<section class="assignment-files"><h5>Original files and instructions</h5>'+resourceHtml+
+        (canManage?'<div class="assignment-upload-row"><input type="file" data-assignment-resource-file="'+esc(assignment.id)+'" accept=".pdf,.doc,.docx,.ppt,.pptx,.xls,.xlsx,.txt,.csv,.json,.zip,.png,.jpg,.jpeg"><button class="btn" type="button" data-assignment-upload-resource="'+esc(assignment.id)+'">＋ Attach original file</button></div>':'')+
+        '</section>'+
+        '<section class="assignment-files"><div class="panel-head"><div><h5>Student submissions</h5><p class="sub">Visible to all members of this workspace. Each upload is kept as a separate version.</p></div><span class="tag">'+assignmentSubmissions.length+' file'+(assignmentSubmissions.length===1?'':'s')+'</span></div>'+submissionHtml+
+        (assignment.status==='open'?'<div class="assignment-submit-box"><div class="field"><label>Upload your submission</label><input type="file" data-assignment-submission-file="'+esc(assignment.id)+'" accept=".pdf,.doc,.docx,.ppt,.pptx,.xls,.xlsx,.txt,.csv,.json,.zip,.png,.jpg,.jpeg"></div><div class="field"><label>Note (optional)</label><input type="text" data-assignment-submission-note="'+esc(assignment.id)+'" maxlength="3000" placeholder="Brief message about this version"></div><button class="btn primary" type="button" data-assignment-submit="'+esc(assignment.id)+'">Submit file</button><p class="sub">Uploading another version keeps the previous submission; it does not overwrite it.</p></div>':'<p class="sub">Submissions are closed for this assignment.</p>')+
+        '</section></article>';
+    }).join(''):'<div class="empty">No assignments yet. Create the first assignment for this workspace.</div>';
+
+    $('workspaceAssignmentCreate').onclick=async()=>{
+      const title=$('workspaceAssignmentTitle').value.trim();
+      if(!title){toast('Enter an assignment title.','error');return}
+      const dueValue=$('workspaceAssignmentDue').value;
+      let dueAt=null;
+      if(dueValue){
+        const parsed=new Date(dueValue);
+        if(!Number.isFinite(parsed.getTime())){toast('Choose a valid due date and time.','error');return}
+        dueAt=parsed.toISOString();
+      }
+      const button=$('workspaceAssignmentCreate');
+      button.disabled=true;
+      try{
+        const {error}=await supa.from('uniplanner_assignments').insert({
+          workspace_id:w.id,
+          project_id:$('workspaceAssignmentProject').value||null,
+          created_by:user.id,
+          title,
+          instructions:$('workspaceAssignmentInstructions').value.trim(),
+          due_at:dueAt
+        });
+        if(error)throw error;
+        toast('Assignment created.');
+        await renderWorkspaceAssignments(w,overview,extra);
+      }catch(error){
+        toast('Could not create assignment: '+(error.message||'Unknown error'),'error');
+        button.disabled=false;
+      }
+    };
+
+    extra.querySelectorAll('[data-assignment-download]').forEach(button=>{
+      button.onclick=()=>assignmentDownload(button.dataset.filePath,button.dataset.fileName);
+    });
+
+    extra.querySelectorAll('[data-assignment-toggle]').forEach(button=>{
+      button.onclick=async()=>{
+        const next=button.dataset.nextStatus;
+        button.disabled=true;
+        try{
+          const {error}=await supa.from('uniplanner_assignments')
+            .update({status:next,updated_at:new Date().toISOString()})
+            .eq('id',button.dataset.assignmentToggle)
+            .eq('workspace_id',w.id);
+          if(error)throw error;
+          toast(next==='closed'?'Submissions closed.':'Submissions reopened.');
+          await renderWorkspaceAssignments(w,overview,extra);
+        }catch(error){
+          toast('Could not update assignment: '+(error.message||'Unknown error'),'error');
+          button.disabled=false;
+        }
+      };
+    });
+
+    async function uploadAssignmentFile(assignmentId,file,kind,note){
+      if(!file){toast('Choose a file first.','error');return}
+      if(file.size<1||file.size>ASSIGNMENT_FILE_LIMIT){
+        toast('Files must be between 1 byte and 20 MB.','error');
+        return;
+      }
+      const mime=assignmentFileMime(file);
+      if(!mime){
+        toast('This file type is not supported. Use PDF, Office documents, text/CSV/JSON, ZIP, PNG or JPEG.','error');
+        return;
+      }
+      const extension=assignmentFileExtension(file);
+      const token=uid().replace(/[^a-zA-Z0-9-]/g,'');
+      const folder=kind==='resource'?'resources':'submissions/'+user.id;
+      const path=w.id+'/'+assignmentId+'/'+folder+'/'+token+'.'+extension;
+      const storage=supa.storage.from(ASSIGNMENT_FILE_BUCKET);
+      const upload=await storage.upload(path,file,{cacheControl:'3600',upsert:false,contentType:mime});
+      if(upload.error)throw upload.error;
+      const metadata=kind==='resource'
+        ? {workspace_id:w.id,assignment_id:assignmentId,uploaded_by:user.id,storage_path:path,original_file_name:file.name,mime_type:mime,file_size_bytes:file.size}
+        : {workspace_id:w.id,assignment_id:assignmentId,submitted_by:user.id,storage_path:path,original_file_name:file.name,mime_type:mime,file_size_bytes:file.size,note:note||''};
+      const table=kind==='resource'?'uniplanner_assignment_resources':'uniplanner_assignment_submissions';
+      const inserted=await supa.from(table).insert(metadata);
+      if(inserted.error){
+        let cleanupError=null;
+        try{
+          const cleanup=await storage.remove([path]);
+          cleanupError=cleanup.error||null;
+        }catch(error){
+          cleanupError=error;
+        }
+        if(cleanupError){
+          throw new Error(
+            'The file details could not be saved ('+(inserted.error.message||'unknown database error')+
+            ') and automatic removal of the uploaded object also failed ('+
+            (cleanupError.message||'unknown Storage error')+'). The private file may remain stored at '+
+            path+'. Contact the workspace owner to have this orphaned upload removed.'
+          );
+        }
+        throw inserted.error;
+      }
+    }
+
+    extra.querySelectorAll('[data-assignment-upload-resource]').forEach(button=>{
+      button.onclick=async()=>{
+        const assignmentId=button.dataset.assignmentUploadResource;
+        const input=extra.querySelector('[data-assignment-resource-file="'+assignmentId+'"]');
+        const file=input?.files?.[0];
+        button.disabled=true;
+        try{
+          await uploadAssignmentFile(assignmentId,file,'resource','');
+          toast('Original file attached.');
+          await renderWorkspaceAssignments(w,overview,extra);
+        }catch(error){
+          toast('Could not upload original file: '+(error.message||'Unknown error'),'error');
+          button.disabled=false;
+        }
+      };
+    });
+
+    extra.querySelectorAll('[data-assignment-submit]').forEach(button=>{
+      button.onclick=async()=>{
+        const assignmentId=button.dataset.assignmentSubmit;
+        const input=extra.querySelector('[data-assignment-submission-file="'+assignmentId+'"]');
+        const note=extra.querySelector('[data-assignment-submission-note="'+assignmentId+'"]')?.value.trim()||'';
+        const file=input?.files?.[0];
+        button.disabled=true;
+        try{
+          await uploadAssignmentFile(assignmentId,file,'submission',note);
+          toast('Submission uploaded. Earlier versions remain available.');
+          await renderWorkspaceAssignments(w,overview,extra);
+        }catch(error){
+          toast('Could not submit file: '+(error.message||'Unknown error'),'error');
+          button.disabled=false;
+        }
+      };
+    });
+
+    async function removeAssignmentFile(table,id,path){
+      const removed=await supa.storage.from(ASSIGNMENT_FILE_BUCKET).remove([path]);
+      if(removed.error)throw removed.error;
+      const {error}=await supa.from(table).delete().eq('id',id).eq('workspace_id',w.id);
+      if(error)throw error;
+    }
+
+    extra.querySelectorAll('[data-assignment-remove-resource]').forEach(button=>{
+      button.onclick=async()=>{
+        if(!confirm('Remove this original assignment file?'))return;
+        button.disabled=true;
+        try{
+          await removeAssignmentFile('uniplanner_assignment_resources',button.dataset.assignmentRemoveResource,button.dataset.filePath);
+          toast('Original file removed.');
+          await renderWorkspaceAssignments(w,overview,extra);
+        }catch(error){
+          toast('Could not remove file: '+(error.message||'Unknown error'),'error');
+          button.disabled=false;
+        }
+      };
+    });
+
+    extra.querySelectorAll('[data-assignment-remove-submission]').forEach(button=>{
+      button.onclick=async()=>{
+        if(!confirm('Remove your submission version? Other members will no longer see this version.'))return;
+        button.disabled=true;
+        try{
+          await removeAssignmentFile('uniplanner_assignment_submissions',button.dataset.assignmentRemoveSubmission,button.dataset.filePath);
+          toast('Your submission version was removed.');
+          await renderWorkspaceAssignments(w,overview,extra);
+        }catch(error){
+          toast('Could not remove submission: '+(error.message||'Unknown error'),'error');
+          button.disabled=false;
+        }
+      };
+    });
+
+  }catch(error){
+    if(request!==workspaceAssignmentsRequest || !panel.isConnected)return;
+    panel.innerHTML='<h3>Assignments</h3><div class="empty">Could not load assignments. Confirm the workspace assignments and private Storage migration is installed. '+esc(error.message||'')+'</div>';
+  }
+}
+
+showWorkspaceTab = async function(tab,w,overview,extra){
+  if(tab!=='assignments')return showWorkspaceTabBeforeAssignments(tab,w,overview,extra);
+  return renderWorkspaceAssignments(w,overview,extra);
+};
+
+
 })();
 </script>
+<script src="./semester-upgrade.js"></script>
+<script>window.UniPlannerSemester?.init();</script>
 </body></html>
